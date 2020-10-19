@@ -60,10 +60,10 @@ public class MainEx {
 		System.out.println(answer);
 		System.out.println(answer2);
 		char result = 'F';
-		char result2 = 'A';
+		char result2 = 'A';	
 		System.out.println(result);
 		System.out.println(result2);
+		boolean als = true;
+		System.out.println(als);
 		
-		
-	}
-}
+	}}
