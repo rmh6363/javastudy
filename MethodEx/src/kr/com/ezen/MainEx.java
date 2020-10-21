@@ -1,11 +1,17 @@
 package kr.com.ezen;
 
+import com.daum.Return;
+import com.google.GetMoney;
+import com.naver.MethodTest2;
+import com.naver.MethodTest3;
+
 public class MainEx {
-	public static void main(String[] args) {
+	public static <getTest2> void main(String[] args) {
 
 		MethodTest mt1 = new MethodTest();
 		MethodTest mt2 = new MethodTest();
 		MethodTest mt3 = new MethodTest();
+
 		mt1.stand();
 		mt1.sleep();
 		mt1.sayHello();
@@ -35,16 +41,56 @@ public class MainEx {
 		mt3.chiken("æÁ≥‰ƒ°≈≤", 22000);
 		mt3.chiken("Ω∫≥Î¿Æƒ°≈≤", 26000);
 		System.out.println("##############");
+		mt3.score2();
+		Test12 tcb = new Test12();
+		tcb.sayHello();
+		tcb.printScore("»´±Êµø", 100);
+		Test13 dan = new Test13();
+		dan.printDan(5);
+
+		MethodTest2 mt5 = new MethodTest2();
+		int re1 = mt5.giveMeTheMoney();
+
+		MethodTest2 mt6 = new MethodTest2();
+		int re2 = mt6.giveMeTheMoney();
+
+		int re3 = mt5.giveMeTheMoney();
+
+		re2 = mt6.giveMeTheMoney();
+
+		MethodTest3 gt12 = new MethodTest3();
+		Test12 re4 = gt12.getTest12();
+
+		Return r = new Return();
+
+		String who = r.getTest(950601);
+		System.out.println(who);
+
+		GetMoney gm = new GetMoney();
+
+		char ≥ÎπŒ»£3 = gm.b();
+		System.out.println(≥ÎπŒ»£3);
+
+		byte ≥ÎπŒ»£4 = gm.c();
+		System.out.println(≥ÎπŒ»£4);
+
+		int ≥ÎπŒ»£5 = gm.d();
+		System.out.println(≥ÎπŒ»£5);
+
+		long ≥ÎπŒ»£6 = gm.e();
+		System.out.println(≥ÎπŒ»£6);
+
+		short ≥ÎπŒ»£7 = gm.f();
+		System.out.println(≥ÎπŒ»£7);
+
+		float ≥ÎπŒ»£8 = gm.g();
+		System.out.println(≥ÎπŒ»£8);
+
+		double ≥ÎπŒ»£9 = gm.h();
+		System.out.println(≥ÎπŒ»£9);
 		
-		if (false) {
-			System.out.println("result : true");
-		} else if(false){
-			System.out.println("result : false");
-		} else if(false){
-			System.out.println("result : false ");
-		} else {
-			System.out.println("result :ture");
 		
-		}
-}
+
+
+	}
 }

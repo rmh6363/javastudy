@@ -52,7 +52,7 @@ public class MethodTest {
 	}
 
 	public void printScore(String name, int score) {
-		System.out.println(name + score + "점");
+		System.out.println(name + " " + score + "점");
 
 	}
 
@@ -87,9 +87,12 @@ public class MethodTest {
 		System.out.println(a);
 	}
 
-	public void chiken(String b,int a) {
-		System.out.println(b+a+"원");
-	
+	public void chiken(String b, int a) {
+		System.out.println(b + a + "원");
 
-}
+	}
+
+	public void score2() {
+		System.out.println("asdf");
+	}
 }
