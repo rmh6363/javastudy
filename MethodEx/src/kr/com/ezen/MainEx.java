@@ -1,6 +1,6 @@
 package kr.com.ezen;
 
-import com.daum.Return;
+
 import com.google.GetMoney;
 import com.naver.MethodTest2;
 import com.naver.MethodTest3;
@@ -61,10 +61,8 @@ public class MainEx {
 		MethodTest3 gt12 = new MethodTest3();
 		Test12 re4 = gt12.getTest12();
 
-		Return r = new Return();
+		
 
-		String who = r.getTest(950601);
-		System.out.println(who);
 
 		GetMoney gm = new GetMoney();
 
@@ -88,6 +86,9 @@ public class MainEx {
 
 		double ≥ÎπŒ»£9 = gm.h();
 		System.out.println(≥ÎπŒ»£9);
+		
+
+		
 		
 		
 
