@@ -8,6 +8,15 @@ public class Cat {
 		name = "°í¾çÀÌ";
 		age = 3;
 	}
+	public Cat(String name) {
+		this.name = name;
+	}
+	public Cat(int age) {
+		this.age = age;
+	}
+		
+		
+	
 
 	public String getName() {
 		return name;
