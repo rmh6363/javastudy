@@ -4,18 +4,12 @@ public class Car {
 	private String modelName;
 	private String carNo;
 	private int price;
-	
+
 	public Car() {
-		
+
 	}
-	public void showMePrice() {
-		System.out.println(price);
-	}
-	public String run(int speed) {
-		speed = 200;
-		String msg = speed + "으로 달린다";
-		return msg;
-	}
+
+	
 
 	public String getModelName() {
 		return modelName;
@@ -46,6 +40,15 @@ public class Car {
 		this.modelName = modelName;
 		this.carNo = carNo;
 		this.price = price;
+	}
+	public void showMePrice() {
+		System.out.println(price);
+	}
+
+	public String run(int speed) {
+		speed = 200;
+		String msg = speed + "으로 달린다";
+		return msg;
 	}
 
 }
