@@ -7,6 +7,7 @@ public class MainEx {
 
 	public static void main(String[] args) {
 		//switch Á¶°Ç¹®
+		
 		Test t1 = new Test();
 		t1.me1(4);
 		t1.me2(3);
@@ -24,8 +25,8 @@ public class MainEx {
 		
 		System.out.println(a==b);
 		Test2 t2 = new Test2();
-		t2.rank();
-		
+	
+		t2.name();
 		
 
 	}

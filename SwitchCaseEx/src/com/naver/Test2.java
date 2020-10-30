@@ -23,10 +23,10 @@ public class Test2 {
 		return c;
 
 	}
-	public void rank() {
-		int a = 3;
-		if(a > 0) {
-			rank();
+
+	public void name() {
+		for(int i = 0; i<10; i++) {
+			System.out.println("hello world");
 		}
 	}
 
