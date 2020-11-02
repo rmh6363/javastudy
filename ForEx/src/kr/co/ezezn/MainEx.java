@@ -1,28 +1,27 @@
 package kr.co.ezezn;
 
 import com.naver.Test;
-import com.naver.Test2;
 
 public class MainEx {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		Test t1 = new Test();
-	
-		t1.dan(3);
-		t1.isSossu(5);
-		t1.me5(5);
-		t1.gugudan();
-		t1.printStar(11);
-		System.out.println("##################");
-		t1.halfDiamond();
-		Test2 t2 = new Test2();
+		t1.me7();
+		t1.name();
+		System.out.println("####################");
 		
-		t2.sosu(13);
-		t1.me6();
-		t1.ss(11);
-		t1.name1(5);
-		t1.name3();
-
-	}
+		for(int i = 0;i<100; i++) {
+			
+			if(i==3) {
+				continue;
+			}
+			System.out.println(i);
+			
+		}
+		t1.me4();
+		
+		
 
 }
+	}
