@@ -1,5 +1,6 @@
 package kr.co.ezen;
 
+import com.naver.Ab;
 import com.naver.Dog;
 import com.naver.Test;
 
@@ -33,6 +34,9 @@ public class MainEx {
 		t1.name();
 		t1.gugudan();
 		t1.name2();
+		Ab ab =new Ab();
+		ab.name();
+		ab.me3();
 		
 			
 		

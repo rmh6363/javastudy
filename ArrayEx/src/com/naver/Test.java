@@ -203,6 +203,7 @@ public class Test {
 	}
 
 	public void gugudan() {
+		
 		int arr[][] = new int[10][10];
 		for (int i = 2; i < arr.length; i++) {
 			for (int j = 1; j < arr[i].length; j++) {
@@ -228,8 +229,7 @@ public class Test {
 		}
 
 	}
-	public void name3() {
-		
-	}
+	
+
 
 }
