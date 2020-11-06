@@ -19,6 +19,8 @@ public class Test {
 		String msg3 = "HELLP";
 		String s1 = msg1.toUpperCase();
 		System.out.println(s1);
+		
+	
 
 		String s2 = msg3.toLowerCase();
 		System.out.println(s2);
