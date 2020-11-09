@@ -14,6 +14,7 @@ public class Bow extends Weapon{
 		super(power);
 		// TODO Auto-generated constructor stub
 	}
+	
 
 
 
