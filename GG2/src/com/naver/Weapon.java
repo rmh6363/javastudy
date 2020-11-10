@@ -1,8 +1,13 @@
 package com.naver;
 
-public  class Weapon {
+public class Weapon {
 	private String name;
 	private int power;
+	public Weapon(String name, int power) {
+		super();
+		this.name = name;
+		this.power = power;
+	}
 	public String getName() {
 		return name;
 	}
@@ -15,25 +20,15 @@ public  class Weapon {
 	public void setPower(int power) {
 		this.power = power;
 	}
-	public Weapon(String name, int power) {
-		super();
-		this.name = name;
-		this.power = power;
-	}
 	public void attack(Monster mon) {
 		int bhp = mon.getHp();
-		int ahp = bhp - power;
+		int ahp = bhp- power;
 		mon.setHp(ahp);
-		System.out.println("monster¿«hp : "+ahp);
-				
+		System.out.println("monster¿« hp : "+ahp);
 	}
 	@Override
 	public String toString() {
 		return getName();
-		
-	}
-	
-	
 	}
 
-
+}

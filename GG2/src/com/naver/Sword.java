@@ -6,9 +6,9 @@ public class Sword extends Weapon{
 		super(name, power);
 		// TODO Auto-generated constructor stub
 	}
-
 	
 
-	
+
+
 
 }
