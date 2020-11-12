@@ -1,0 +1,29 @@
+package kr.co.ezen;
+
+import java.util.Scanner;
+
+import com.naver.Bow;
+import com.naver.Gun;
+import com.naver.Hero;
+import com.naver.Monster;
+import com.naver.Sword;
+import com.naver.Weapon;
+
+public class MainEx {
+	Scanner sc = new Scanner(System.in);
+	Monster mon = new Monster(100);
+	Weapon[] weapons = {new Bow("È°", 5), new Gun("ÃÑ", 10), new Sword("Ä®", 6)};
+	Weapon w = weapons[2];
+	Hero hero = new Hero(weapons, w);
+	int menu = 0;
+	int weaponidx = 0;
+	boolean isTrue =true;
+	
+	
+	
+
+	
+	
+
+	
+}

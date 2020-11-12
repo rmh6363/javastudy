@@ -1,0 +1,23 @@
+package com.naver;
+
+import java.util.Random;
+
+public class Test {
+	public void me3() {
+		Random rnd = new Random();
+	}
+	
+	public void me2() {
+		Random rnd = new Random(System.currentTimeMillis());
+		
+	}
+	
+	
+	public void me1() {
+		Random rnd = new Random();
+		
+	}
+	
+	
+
+}

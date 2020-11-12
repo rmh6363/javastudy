@@ -1,0 +1,18 @@
+package com.naver;
+
+public class Test6 {
+	
+		Inter1 asd = new Inter1() {
+
+			@Override
+			public void me1() {
+				System.out.println(11111);
+
+			}
+		};
+		
+		
+
+	}
+
+

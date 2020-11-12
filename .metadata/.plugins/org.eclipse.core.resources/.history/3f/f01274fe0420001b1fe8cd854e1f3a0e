@@ -1,0 +1,12 @@
+package com.daum;
+
+public class Gun extends Weapon{
+	public Gun() {
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	
+	
+
+}

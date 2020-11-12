@@ -1,0 +1,7 @@
+package com.naver;
+
+public class Sm5 {
+	public void me1() {
+		
+	}
+}

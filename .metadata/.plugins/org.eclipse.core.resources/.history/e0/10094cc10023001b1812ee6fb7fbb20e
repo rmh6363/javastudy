@@ -1,0 +1,8 @@
+package com.naver;
+
+public interface Gun{
+	
+
+
+
+}

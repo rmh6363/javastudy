@@ -1,0 +1,37 @@
+package kr.co.test;
+
+import java.util.Scanner;
+
+public class Test {
+	
+	private final int  A_B_C = 3;
+	private static final int C_D_E = 44;
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Test t1 = new Test();
+		//상수 대문자 처리 뛰어쓰기 대신 언더바_ 사용
+		
+
+		int a = 0;
+		boolean isTrue = true;
+		while (isTrue) {
+			System.out.println("a 값을 입력하세요.");
+			a = sc.nextInt();
+			sc.nextLine();
+			System.out.println("msg1값을 이력하세요");
+			String msg1 = sc.nextLine();
+			System.out.println(msg1);
+			if (a==4) {
+				break;
+			}
+			System.out.println(a+"를 넘겨받았습니다.");
+			
+		}
+		System.out.println("End");
+		sc.close();
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.naver;
+
+public class Test {
+	
+	public void me2() {
+		int[] arr = {3,6,9};
+		System.out.println(arr[3]);
+	}
+	
+	public void me1() {
+		String msg = "hello";
+		System.out.println(msg.length());
+	}
+
+}

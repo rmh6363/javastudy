@@ -1,0 +1,13 @@
+package com.naver;
+
+public class K7 extends Car {
+	public K7() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public K7(String model, String name, int price) {
+		super(model, name, price);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

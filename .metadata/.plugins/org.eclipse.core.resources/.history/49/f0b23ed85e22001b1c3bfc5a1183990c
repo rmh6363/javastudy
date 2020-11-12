@@ -1,0 +1,11 @@
+package Test;
+
+public class Gun extends Weapon {
+
+	public Gun(int power, String name) {
+		super(power, name);
+		// TODO Auto-generated constructor stub
+	}
+
+
+}

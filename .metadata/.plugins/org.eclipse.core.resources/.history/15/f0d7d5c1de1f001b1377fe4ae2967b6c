@@ -1,0 +1,17 @@
+package com.naver;
+
+public class Sm5 extends Car {
+	
+	public Sm5() {
+		// TODO Auto-generated constructor stub
+	}
+	public Sm5(String model, String name, int price) {
+		super(model, name, price);
+		// TODO Auto-generated constructor stub
+	}
+	public void me1() {
+		gugudan(8);
+		
+	}
+	
+}

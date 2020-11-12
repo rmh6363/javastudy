@@ -1,0 +1,150 @@
+package com.naver;
+
+import java.sql.Time;
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class Test {
+	public void me7() {
+		Calendar c = Calendar.getInstance();
+		System.out.println(c.getTime());
+		c.roll(Calendar.DATE, 20);
+		System.out.println(c.getTime());
+		System.out.println(c.get(Calendar.MONTH));
+		System.out.println(c.get(Calendar.DATE));
+		System.out.println(c.get(Calendar.DAY_OF_WEEK));
+	}
+	
+	public void me6() {
+		Calendar c = Calendar.getInstance();
+		System.out.println(c.getTime());
+		//add()는 calendar 객체의 정보를 변경
+		//특정 필드의 값에 주어진 값을 더해서 변경
+		c.add(Calendar.DATE,20);
+		System.out.println(c.getTime());
+	}
+//	public void me5() {//안중요한 예제....공부 안 해도 되는 예제
+//		Scanner sc = new Scanner(System.in);
+//		try {
+//			System.out.println("연도를 입력하세요.");
+//			int year = sc.nextInt();
+//			sc.nextLine();
+//
+//			System.out.println("월을 입력하세요.");
+//			int month = sc.nextInt();
+//			sc.nextLine();
+//
+//			Calendar c = Calendar.getInstance();
+//			c.set(year, month - 1, 1);
+//			int lastDate = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+//			int firstDateDay = c.get(Calendar.DAY_OF_WEEK);
+//
+//			System.out.println(year + "년" + month + "월");
+//			System.out.println(" SU MO TU WE TH FR SA");
+//			for (int i = 1; i < firstDateDay; i++) {
+//				System.out.print("   ");
+//			}
+//			for (int i = 1; i < lastDate; i++) {
+//				String naljja = i < 10 ? "  " + i : " " + i;
+//				System.out.print(naljja);
+//				if ((i + firstDateDay - 1) % Calendar.SATURDAY == 0) {
+//					System.out.println();
+//				}
+//			}
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		} finally {
+//			sc.close();
+//		}
+//
+//	}
+
+	public void me4() {
+		Calendar c = Calendar.getInstance();
+		c.set(1950, Calendar.FEBRUARY, Calendar.DAY_OF_WEEK);
+		int maxDate = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+		int date = c.get(Calendar.DAY_OF_WEEK);
+		System.out.println(maxDate);
+		System.out.println(date);
+	}
+
+	public void me32() {
+		Calendar c = Calendar.getInstance();
+		c.set(1950, Calendar.JUNE, 25);
+		int date = c.get(Calendar.DAY_OF_WEEK);
+
+		switch (date) {
+		case 1:
+			System.out.println("일요일");
+
+			break;
+		case 2:
+			System.out.println("월요일");
+
+			break;
+		case 3:
+			System.out.println("화요일");
+
+			break;
+
+		case 4:
+			System.out.println("수요일");
+
+			break;
+
+		case 5:
+			System.out.println("목요일");
+
+			break;
+		case 6:
+			System.out.println("굼요일");
+
+			break;
+		case 7:
+			System.out.println("토요일");
+
+			break;
+
+		}
+	}
+
+	public void me31() {
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.MONTH, Calendar.MAY);
+		System.out.println(c);
+
+	}
+
+	public void me3() {
+		Calendar c1 = Calendar.getInstance();
+		Calendar c2 = Calendar.getInstance();
+
+		c1.set(1950, 6 - 1, 25);
+		System.out.println(c1);
+		System.out.println(c2);
+	}
+
+	public void me2() {
+		// Calendar 클래스를 이용해서 객체 c를 생성하시오.
+		Calendar c = Calendar.getInstance();
+		// c를 이용해서 연도 정보 추출하기
+		int year = c.get(Calendar.YEAR);
+		// 월 정보 int month(0월부터시작)
+		// 일 정보 int date
+		// 요일 정보 int day
+		int month = c.get(Calendar.MONTH) + 1;// 사용자 한테 보여줄떄는 +1 시스템상에 입력할땐 -1 DB에 저장할떄는 그대로
+		int date = c.get(Calendar.DATE);
+		int day = c.get(Calendar.DAY_OF_WEEK);
+		System.out.println(year);
+		System.out.println(month);
+		System.out.println(date);
+		System.out.println(day);
+
+	}
+
+	// 1. calendar 클래스 객체 생성 방법
+	public void me1() {
+		Calendar c = Calendar.getInstance();
+	}
+}

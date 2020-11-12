@@ -1,0 +1,38 @@
+package com.naver;
+
+import java.util.Random;
+
+public class Test {
+	public void me4() {
+		Random rnd = new Random();
+		int num = rnd.nextInt(n)+3;	
+		
+		
+	}
+	
+	
+	
+	
+	public void me3() {
+		Random rnd = new Random();
+		for (int i = 0; i < 100; i++) {
+			int num = rnd.nextInt(3);
+			System.out.println(num);
+		}
+		
+	}
+	
+	public void me2() {
+		Random rnd = new Random(System.currentTimeMillis());
+		
+	}
+	
+	
+	public void me1() {
+		Random rnd = new Random();
+		
+	}
+	
+	
+
+}

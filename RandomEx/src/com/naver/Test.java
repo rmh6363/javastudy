@@ -1,0 +1,121 @@
+package com.naver;
+
+import java.util.Random;
+
+public class Test {
+	public void me10() {
+		Random rnd = new Random();
+		for (int i = 0; i < 5; i++) {
+			int num = rnd.nextInt(5)+1;
+			switch (num) {
+			case 1:
+				System.out.println("±¹¹ä");
+			break;
+			case 2:
+				System.out.println("¸é");
+				break;
+			case 3:
+				System.out.println("Âî°³");
+				break;
+			case 4:
+				System.out.println("Æí½Ä");
+				break;
+			case 5:
+				System.out.println("ÇÜ¹ö°Å");
+				break;				
+
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void me6() {
+			Random rnd1 = new Random(1);
+			Random rnd2 = new Random(4);
+			
+			int num1 = rnd1.nextInt(1000);
+			int num2 = rnd2.nextInt(1000);
+			System.out.println(num1);
+			System.out.println(num2);
+			System.out.println(num1==num2);
+	}
+	
+	public void me5(int start, int end) {
+		//start~end
+		//n = end - start+1
+		
+		Random rnd = new Random();
+		for (int i = 0; i < 100; i++) {
+			int num = rnd.nextInt(end-start+1)+start;// 
+			System.out.println(num);
+			
+		}
+		
+	}
+	public void me4() {
+		Random rnd = new Random();
+		for (int i = 0; i < 100; i++) {
+			int num = rnd.nextInt(8) + 3;
+			System.out.println(num);
+		}	
+		
+		
+	}
+	
+	
+	
+	
+	public void me3() {
+		Random rnd = new Random();
+		for (int i = 0; i < 100; i++) {
+			int num = rnd.nextInt(3);
+			System.out.println(num);
+		}
+		
+	}
+	
+	public void me2() {
+		Random rnd = new Random(System.currentTimeMillis());
+		
+	}
+	
+	
+	public void me1() {
+		Random rnd = new Random();
+		
+	}
+	
+	
+
+}

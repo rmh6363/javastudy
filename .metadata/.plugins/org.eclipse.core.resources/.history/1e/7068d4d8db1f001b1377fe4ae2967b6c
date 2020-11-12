@@ -1,0 +1,43 @@
+package com.naver;
+
+public class Car {
+	public String model;
+	private String company;
+	private int price;
+	
+	public Car() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Car(String model, String name, int price) {
+		super();
+		this.model = model;
+		this.company = name;
+		this.price = price;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public String getName() {
+		return company;
+	}
+
+	public void setName(String name) {
+		this.company = name;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+}

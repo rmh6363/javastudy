@@ -1,0 +1,7 @@
+package com.daum;
+
+public class Chapion {
+	Position[] pt;
+	Position p;
+
+}

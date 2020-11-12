@@ -1,0 +1,26 @@
+package com.naver;
+
+public class Test3 {
+	private String msg;
+	
+	public class StatiInnerClass{
+		private int age;
+		
+		public int getAge() {
+			return age;
+		}
+
+		public void setAge(int age) {
+			this.age = age;
+		}
+
+		public void name() {
+			System.out.println("sic");
+			
+		}
+	}
+	public void me1() {
+		
+	}
+
+}

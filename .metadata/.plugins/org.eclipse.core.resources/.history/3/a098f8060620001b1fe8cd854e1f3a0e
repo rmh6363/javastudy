@@ -1,0 +1,38 @@
+package com.daum;
+
+public class Hero {
+	Weapon[] weapon;
+	Weapon w;
+	public Hero() {
+		
+	}
+	public Weapon[] getWeaponarr() {
+		return weapon;
+	}
+	public void setWeaponarr(Weapon[] weaponarr) {
+		this.weapon = weaponarr;
+	}
+	public Weapon getW() {
+		return w;
+	}
+	public void setW(Weapon w) {
+		this.w = w;
+	}
+	public Hero(Weapon[] weaponarr, Weapon w) {
+		super();
+		this.weapon = weaponarr;
+		this.w = w;
+	}
+	public void changeWeapon(int weaponidx) {
+		if(weaponidx >= weapon.length||weaponidx <0) {
+			weaponidx = weapon.length-1;
+		}
+		w = weapon[weaponidx];
+		System.out.println(w + "로 변경되었습니다.");
+	}
+	public void attack(Monster mon) {
+		w.attack(mon);
+	}
+	
+
+}

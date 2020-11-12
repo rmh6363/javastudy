@@ -1,0 +1,21 @@
+package com.naver;
+
+public class Hero {
+	private Weapon Wp;
+	private Hero hero;
+	
+	public Hero() {
+	
+	}
+	public void useWeapon(Weapon weapon) {
+		hero.useWeapon(weapon);
+	}
+	
+	public void attack(Monster mon) {
+		hero.attack(mon);
+	}
+	public void changeWeapon(Weapon weapon) {
+		hero.changeWeapon(weapon);
+	}
+
+}

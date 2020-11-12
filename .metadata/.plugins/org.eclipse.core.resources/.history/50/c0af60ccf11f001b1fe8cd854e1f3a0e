@@ -1,0 +1,28 @@
+package com.naver;
+
+public class Sonata extends Car {
+	private String model = "sonata";
+	
+	public Sonata() {
+		run();
+	
+		
+	}
+
+	public Sonata(String model, String name, int price) {
+		super(model, name, price);
+	}
+	
+	public void me1() {
+		System.out.println(getModel());
+		
+	}
+
+	@Override
+	public void run() {
+		System.out.println(":::::::::::::::::::::::::::");
+		System.out.println("sonata 클래스의 run()");
+		System.out.println(":::::::::::::::::::::::::::");
+	}
+
+}

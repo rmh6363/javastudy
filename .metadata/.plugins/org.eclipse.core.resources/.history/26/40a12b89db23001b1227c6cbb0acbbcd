@@ -1,0 +1,32 @@
+package com.naver;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class Test {
+	public void me3() {
+		Serializable t1 = new String("hh");
+		Serializable t2 = new ArrayList<Object>();
+		
+		
+			try {
+				String msg = (String) t2;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				System.out.println("뭔가가 문제가 있지만 무시하겠음");;
+			}
+		
+		
+	}
+	
+	public void me2() {
+		int[] arr = {3,6,9};
+		System.out.println(arr[arr.length-1]);
+	}
+	
+	public void me1() {
+		String msg = "hello";
+		System.out.println(msg.length());
+	}
+
+}

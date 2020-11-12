@@ -1,0 +1,18 @@
+package com.naver;
+
+public class Test3 {
+	private String msg;
+	
+	public class StatiInnerClass{
+		private int age;
+		
+		public void name() {
+			System.out.println("sic");
+			
+		}
+	}
+	public void me1() {
+		
+	}
+
+}

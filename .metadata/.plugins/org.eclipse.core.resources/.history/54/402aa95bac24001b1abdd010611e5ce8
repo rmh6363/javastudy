@@ -1,0 +1,19 @@
+package com.naver;
+
+import java.sql.Wrapper;
+
+public class Test {
+	
+	public void me1() {
+		boolean a = false;
+		char b = ' ';
+		byte c = 0;
+		short d = 0;
+		int e = 0;
+		long f = 0L;
+		float g= 0F;
+		double h= 0 ;
+	
+	}
+
+}
