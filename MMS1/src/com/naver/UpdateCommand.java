@@ -23,6 +23,9 @@ public class UpdateCommand implements Command{
 	
 		
 		
+	}@Override
+	public String toString() {
+		return "¼öÁ¤";
 	}
 
 }

@@ -16,4 +16,9 @@ public class DeletCommand implements Command {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "ªË¡¶";
+	}
+
 }

@@ -11,6 +11,11 @@ public class SelectCommand implements Command {
 			System.out.println(dto);
 		}
 		
+		
+	}
+	@Override
+	public String toString() {
+		return "Á¶È¸";
 	}
 
 }
