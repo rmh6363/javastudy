@@ -1,11 +1,12 @@
 package kr.co.ezen;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.naver.DTO2;
+
 
 
 public class Test {
@@ -15,9 +16,14 @@ public class Test {
 		List<DTO2> list = new ArrayList<DTO2>();
 		list.add(new DTO2("a001", "대구", "사과1", 1500));
 		list.add(new DTO2("a002", "대전", "사과2", 2000));
+		list.add(new DTO2("a005", "청송", "사과5", 1000));
 		list.add(new DTO2("a003", "서울", "사과3", 3000));
 		list.add(new DTO2("a004", "부산", "사과4", 2500));
-		list.add(new DTO2("a005", "청송", "사과5", 1000));
+		System.out.println("#############################");
+		Collections.sort(list);
+		System.out.println(list);
+		System.out.println("###########################");
+		
 		list.remove(3);
 		list.remove(2);
 		list.clear();
@@ -113,6 +119,8 @@ public class Test {
 		System.out.println(list);
 		list.remove(2);
 		list.remove(1);
+		System.out.println(list);
+		Collections.sort(list);
 		System.out.println(list);
 		
 	
