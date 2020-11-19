@@ -5,7 +5,7 @@ import java.util.Random;
 public class Test {
 	public void me10() {
 		Random rnd = new Random();
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 1; i++) {
 			int num = rnd.nextInt(5)+1;
 			switch (num) {
 			case 1:
