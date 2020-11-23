@@ -1,0 +1,19 @@
+package com.naver;
+
+public class Board {
+	private String todayPost;
+	   
+	   public Board() {
+	      // TODO Auto-generated constructor stub
+	   }
+
+	   public String getTodayPost() {
+	      return todayPost;
+	   }
+
+	   public void setTodayPost(String todayPost) {
+	      this.todayPost = todayPost;
+	   }
+	   
+
+}

@@ -1,0 +1,71 @@
+create table test(
+name varchar2(3),
+age number(3)
+)
+
+insert into test values('kim','20')
+insert into test values('lee','40')
+insert into test values('cho','23')
+select * from test
+commit
+
+test 테이블의
+모든 레코드의
+모드 컬럼값을
+조회하시오
+
+select * from test
+select name from test
+select age from test
+
+alias
+컬럼에 별명 넣기
+
+select name as 이름, age as 나이 from test
+
+select name 이름, age 나이 from test
+
+select name as 이름,age 나이 from test
+insert into test values('kim',33)
+commit
+
+test 테이블에 등록된 성 씨를 모두 출력하시오. (distinct 중복을 없앰)
+select distinct name from test
+update test set name = 'roh' where name = 'cho'
+select * from test
+update test set age = 15 where name = 'roh'
+
+select * from test order by age asc 오름차순
+SELECT * From test order by age desc 내림차순
+
+test 테이블의
+모든 레코드를
+모든 컬럼이 포함되게
+조회하되
+이름을 기준으로 내림차순으로 정렬 하시오.
+select * from test order by name desc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

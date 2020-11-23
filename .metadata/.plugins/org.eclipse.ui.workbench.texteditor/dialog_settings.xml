@@ -8,6 +8,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value="null"/>
 		<list key="findhistory">
+			<item value="a"/>
 			<item value="&#x09;&#x09;}"/>
 			<item value="&#x09;&#x09;}System.out.println();"/>
 			<item value="null"/>

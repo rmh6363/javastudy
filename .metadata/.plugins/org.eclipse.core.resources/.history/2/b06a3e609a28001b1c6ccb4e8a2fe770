@@ -1,0 +1,17 @@
+package kr.co.ezen;
+
+import com.naver.Sum;
+import com.naver.Test;
+
+public class MainEx {
+	public static void main(String[] args) {
+		System.out.println("main start");
+		Sum sum = new Sum();
+		
+		Test t1 = new Test(sum, 1, 10000);
+		t1.start();
+		System.out.println(sum.getNum());
+		
+	}
+
+}

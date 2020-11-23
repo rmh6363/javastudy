@@ -1,0 +1,27 @@
+package com.naver;
+
+public class Sum {
+	private int num;
+	
+	public Sum() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Sum(int num) {
+		super();
+		this.num = num;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+	public synchronized void addNum(int n) {
+		//임계영역,critical section
+		num += n;
+	}
+
+}

@@ -1,0 +1,74 @@
+package com.naver;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.Reader;
+import java.io.Writer;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Test {
+	public void me2() {
+		Reader in = null;
+
+		try {
+			in = new FileReader("C:" + File.separator + "ss.txt");
+			char[] arr = new char[1024];
+			int length = -1;
+			while (true) {
+				 length= in.read(arr);
+				if(length == -1) {
+					break;
+				}
+				for (int i = 0; i < length; i++) {
+					System.out.print(arr[i=]);
+				}
+			}
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (in != null) {
+					in.close();
+				}
+
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+	public void me1() {
+		Writer out = null;
+		try {
+			out = new FileWriter("C:" + File.separator + "asdf.txt");
+			Set<String> set = new HashSet<String>();
+			set.add("가");
+			set.add("나");
+			set.add("다");
+			set.add("라");
+			Iterator<String> it = set.iterator();
+			while (it.hasNext()) {
+				String string = it.next();
+				System.out.println(string);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (out != null) {
+					out.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+}

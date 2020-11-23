@@ -1,0 +1,250 @@
+package com.naver;
+
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.Reader;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+public class Test {
+	public void me7() {
+		Writer out = null;
+		PrintWriter pw = null;
+		try {
+			out = new FileWriter("aaa.txt");
+			pw = new PrintWriter(out);
+			
+			pw.print(false);
+			pw.println(false);
+			pw.println(false);
+			pw.flush();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (out != null) {
+					out.close();
+				}
+				if (pw != null) {
+					pw.checkError()
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+	
+	public void me6() {
+		InputStream in = null;
+		InputStreamReader isr = null;
+		BufferedReader br = null;
+		try {
+			in = new FileInputStream("C:"+File.separator+"abc.txt");
+			isr = new InputStreamReader(in);
+			br = new BufferedReader(isr);
+			//멀티미디어 파일의 데이터는 문자스트림을 사용할 수 없음.
+			String what = null;
+			
+			while (true) {
+				what =br.readLine();
+				if(what == null) {
+					break;
+				}
+				System.out.println(what);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null) {
+					br.close();
+				}
+				if (isr != null) {
+					isr.close();
+				}
+				if (in != null) {
+					in.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+	public void me5() throws Exception {
+		// 콘솔창에서 사용자의 입력을
+		// scanner를 이용해서 획득했는데
+		// 예전에는 또 어떤 회사들은 아직도
+		// BufferedReader를 이용합니다
+		// InputStreamReader      Input 과 Reader 연결시켜줌
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("당신이 가장 좋아하는 숫자 하나를 입력하시오.");
+
+		String sNum = br.readLine();
+		int num = Integer.parseInt(sNum);
+		System.out.println("당신이 가장 좋아하는 숫자 하나를 입력하시오.");
+		String sNum2 = br.readLine();
+		int num2 = Integer.parseInt(sNum2);
+		System.out.println("두 수의 합은 " + (num + num2));
+		if (br != null) {
+			br.close();
+		}
+	}
+
+	public void me4() {
+		// InputStream - OutputStream
+		// FileInputStream - FileoutputStream
+		// pair를 맞춘다
+		// pair를 안 맞추는 이유 : 하나는 많이 사용 되는데, 다른 것은 거의 사용을 안 함.
+		// BufferedReader  enter 기준으로 한줄
+		// Scanner
+		Reader in = null;
+		BufferedReader br = null;
+		try {
+			in = new FileReader("C:"+File.separator+"ss.txt");
+			br = new BufferedReader(in);
+			String read = null;
+			while (true) {
+				read = br.readLine();
+				if (read == null) {
+					break;
+				}
+				System.out.println(read);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null) {
+					br.close();
+				}
+				if (in != null) {
+					in.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+
+		
+	}
+
+	public void me3() {
+		Reader in = null;
+		Writer out = null;
+		try {
+			out = new FileWriter("C:" + File.separator + "abc.txt");
+			List<String> list = new ArrayList<String>();
+			list.add("1");
+			list.add("2");
+			list.add("3");
+			list.add("4");
+			list.add("목요일");
+			list.add("5");
+			for (int i = 0; i < list.size(); i++) {
+				out.write(list.get(i));
+				out.write(System.getProperty("line.separator"));
+			}
+			out.flush();
+			in = new FileReader("C:" + File.separator + "abc.txt");
+			char[] arr = new char[1024];
+			int length = -1;
+			while (true) {
+				length = in.read(arr);
+				if (length == -1) {
+					break;
+				}
+				for (int i = 0; i < length; i++) {
+					System.out.print(arr[i]);
+				}
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (in != null) {
+					in.close();
+				}
+				if (out != null) {
+					out.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+	public void me2() {
+		Reader in = null;
+		try {
+			in = new FileReader("C:" + File.separator + "ss.txt");
+			char[] arr = new char[1024];
+			int length = -1;
+			while (true) {
+				length = in.read(arr);
+				if (length == -1) {
+					break;
+				}
+				for (int i = 0; i < length; i++) {
+					System.out.print(arr[i]);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (in != null) {
+					in.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+
+	}
+
+	public void me1() {
+		Writer out = null;
+		try {
+			out = new FileWriter("C:" + File.separator + "asdf.txt");
+			Set<String> set = new HashSet<String>();
+			set.add("가");
+			set.add("나");
+			set.add("다");
+			set.add("라");
+			Iterator<String> it = set.iterator();
+			while (it.hasNext()) {
+				String string = it.next();
+				System.out.println(string);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (out != null) {
+					out.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+}

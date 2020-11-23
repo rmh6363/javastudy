@@ -1,0 +1,11 @@
+package com.naver;
+
+public class ZZZ extends Thread{
+	
+	@Override
+	public void run() {
+		System.out.println(this.getName());
+		
+	}
+
+}

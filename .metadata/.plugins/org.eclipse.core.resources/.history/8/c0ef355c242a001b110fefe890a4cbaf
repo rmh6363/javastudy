@@ -1,0 +1,19 @@
+package kr.co.ezen;
+
+import com.naver.Test;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		Test t1 = new Test();
+		try {
+			t1.me5();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}
