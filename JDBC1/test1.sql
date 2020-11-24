@@ -132,59 +132,165 @@ select rownum rnum, name,age from
 
 
 
+select * from test where name = 'kim' and age = 20
+
+
+DB에 데이터를 저장한 상태에서
+컬럼 하나만을 이용해서
+특정 레코드 하나만을 조회하고 싶어.
+가능할까요?
+--> 기본키 = 주키 = primary key = pk
+
+create table member2(
+id varchar2(6),
+name varchar2(6),
+age number(3)
+)
+
+insert into member2 values('m001','kim',30)
+insert into member2 values('m001','kim',30)
+insert into member2 values('m001','kim',30)
+insert into member2 values('m001','kim',30)
+insert into member2 values('m001','kim',30)
+insert into member2 values('m001','kim',30)
+insert into member2 values('m001','kim',30)
+commit
+
+select * from member2 where id = 'm001' and name = 'kim'
+
+delete from member2
+
+commit
+
+alter table member2 add constraint pk_member2_id primary key(id)
+
+기본키를 설정하면,
+기본키에 대한 중복을 허용하지 않는다
+unique constraint
+
+기본키를 설정하면
+기본키에 대해 NOT NULL(NULL을 허용하지 않음) 제약조건이 추가된다.
+
+insert into member2 values('m001','kim',30)
+insert into member2 values('m002','kim',30)
+insert into member2 values('m003','kim',30)
+insert into member2 values('m004','kim',30)
+insert into member2 values('m005','kim',30)
+insert into member2 values('m006','kim',30)
+insert into member2 values('m007','kim',30)
+commit
+insert into member2 (id,name,age)values('m008','lee',44)
+commit
+select * from member2 where id = 'm004'
+
+--alter table member add constraint pk_member_id primary key(mid)
+--
+--create table test2 (
+--id varchar2(6) primary key,
+--age number(3))
+--
+--create table test3(
+--id varchar2(6),
+--age number(3),
+--constraint pk_test3_id primary key(id)
+--)
+
+
+
+alter table test add constraint pk_test_id primary key(id)
+===============================================================
+외래키 = foreign key = fk
+
+당신이 좋아하는 음식을 다음 중에서만 고르시오
+1.갈비
+2.떡볶이
+3.된장찌개
+4.김치찌개
+
+나는 피자
+1~4 중에서만 선택하라고 했는데, 피자를 선택하다니...
+이런 일 없게 하자.
+
+외래키가(foreign key = fk)가 되려면 , 반드시 부모 테이블의 기본키
+1.
+create table employee(
+eid varchar2(6),
+ename varchar2(6),
+edep varchar2(9) 
+)
+
+2.
+alter table employee add constraint pk_employee_eid primary key(eid)
+
+3.
+create table depart(
+edep varchar2(9) 
+)
+
+4.
+alter table depart add constraint pk_DEP_edep primary key(edep)
+
+5.
+alter table employee add constraint fk_employee_edep foreign key(edep)
+references depart(edep)
+
+6.
+insert into depart values('인사부')
+insert into depart values('홍보부')
+insert into depart values('연구실')
+insert into depart values('영업부')
+
+insert into employee (eid,ename,edep) values('e001','kim','인사부')
+insert into employee (eid,ename,edep) values('e002','lee','홍보부')
+insert into employee (eid,ename,edep) values('e003','park','연구실')
+insert into employee (eid,ename,edep) values('e004','choi','영업부')
+insert into employee (eid,ename,edep) values('e005','jung','비서실') -- 입력안됌
+
+--edep에는 인사부/홍보부/연구실/영업부만 들어갈 수 있음
+
+
+
+select * from employee
+
+
+ 
+
+
+
+insert into employee(eid, ename) values ('e006','kim')
+select * from employee
+
+--외래키는 null값 허용
+
+
+
+update member set name = 'z', job = 'l' where mid = 'm002'
 
 
 
 
+create table china(
+menu varchar2(9) primary key,
+price number(5))
 
+create table menu(
+menu varchar2(9) primary key)
 
+alter table china add constraint fk_china_menu foreign key(menu)
+references menu
 
+insert into menu values('짜장면')
+insert into menu values('짬뽕')
+insert into menu values('탕수육')
+insert into menu values('간짜장')
 
-
-
-select * from
-(select rownum rnum,name 이름, age 나이 from(
-select name, age from test order by age asc))
-where rnum between 1 and 4
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+insert into china values ('짜장면',5000)
+insert into china values ('짬뽕',6000)
+insert into china values ('탕수육',15000)
+insert into china values ('간짜장',7000)
+insert into china values('국밥',6000)
+select * from china
+select * from member
 
 
 
