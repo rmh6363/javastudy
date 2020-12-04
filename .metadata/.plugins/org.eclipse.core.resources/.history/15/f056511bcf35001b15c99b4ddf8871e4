@@ -1,0 +1,16 @@
+delete from member
+commit
+select * from member
+drop table member
+create table member(
+mid varchar2(10),
+name varchar2(10),
+job varchar2(10),
+birth date
+)
+alter table member add constraint pk_member_member_num primary key(member_num)
+
+create table rank(
+rank_number varchar2(10),
+rank_name varchar2(10))
+drop table member

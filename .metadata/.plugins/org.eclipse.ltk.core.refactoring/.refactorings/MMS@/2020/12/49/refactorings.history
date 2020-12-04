@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;selectCommand.java&apos; to &apos;MMS@/src/com.naver&apos;&#x0D;&#x0A;- Original project: &apos;MMS@&apos;&#x0D;&#x0A;- Destination element: &apos;MMS@/src/com.naver&apos;&#x0D;&#x0A;- Original element: &apos;com.naver.selectCommand.java&apos;" description="Copy compilation unit" destination="/src&lt;com.naver" element1="/src&lt;com.naver{selectCommand.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1607046469682" units="1" version="1.0"/>
+</session>

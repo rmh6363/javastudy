@@ -1,0 +1,9 @@
+create table crud(
+id varchar2(10) primary key,
+name varchar2(10),
+job varchar2(10),
+birth varchar2(10))
+select * from crud
+select * from MEMBER_P
+alter sequence num increment by 1
+delete from member_P

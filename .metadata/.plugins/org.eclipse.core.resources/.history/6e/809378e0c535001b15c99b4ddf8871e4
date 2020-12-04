@@ -1,0 +1,37 @@
+package kr.co.ezen;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+import com.naver.Command;
+import com.naver.DeleteCommand;
+import com.naver.EndCommand;
+import com.naver.InsertCommand;
+import com.naver.selectCommand;
+import com.naver.updateCommand;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		Map<Integer, Command> map = new HashMap<>();
+		map.put(0, new InsertCommand());
+		map.put(1, new selectCommand());
+		map.put(2, new updateCommand());
+		map.put(3, new DeleteCommand());
+		map.put(4, new EndCommand());
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+

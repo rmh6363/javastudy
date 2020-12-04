@@ -1,0 +1,208 @@
+package com.naver;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Test {
+	
+	public void m() {
+		Map<String, List<String>> map = new HashMap<String, List<String>>();
+		List<String> list = new ArrayList<>();
+		list.add("A");
+		list.add("B");
+		list.add("O");
+		list.add("AB");
+		List<String> list2 = new ArrayList<>();
+		list2.add("180");
+		list2.add("170");
+		map.put("blood", list);
+		map.put("tall", list2);
+		while (true) {
+			Set<String> set = map.keySet();
+			Iterator<String> it = set.iterator();
+			while (it.hasNext()) {
+				String string = it.next();
+				System.out.println(string);
+				
+			}
+			
+		}
+		
+		
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	public void me5(String filename) {
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("txt", "문서파일");
+		map.put("png", "이미지파일");
+		map.put("gif", "이미지파일");
+		map.put("jpeg", "이미지파일");
+		map.put("jpg", "이미지파일");
+		
+		int idx = filename.indexOf(".");
+		String key = filename.substring(idx+1);
+		String msg= map.get(key.toLowerCase());
+		System.out.println(msg);
+	}
+	
+	
+
+
+
+
+	public void me4() {
+		Map<String, List<Dog>> map = new HashMap<String, List<Dog>>();
+		List<Dog> list1 = new ArrayList<Dog>();
+		list1.add(new Dog("d001", "누렁이", "진도인", 3));
+		list1.add(new Dog("d002", "백구", "진도인2", 4));
+		List<Dog> list2 = new ArrayList<Dog>();
+		list2.add(new Dog("d003", "happy", "독일인1", 3));
+		list2.add(new Dog("d004", "타크", "독일인", 2));
+		map.put("진돗개", list1);
+		map.put("세퍼드", list2);
+		List<Dog> a = map.get("진돗개");
+		List<Dog> b = map.get("세퍼드");
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(map.get("진돗개").get(0));
+
+	}
+
+	public void me3() {
+		// 1. map 객체 생성
+		// 단 k : String v : List<String>
+		Map<String, List<String>> map = new HashMap<String, List<String>>();
+		List<String> list1 = new ArrayList<String>();
+		list1.add("sonata");
+		list1.add("exel");
+		list1.add("genesis");
+		list1.add("grandue");
+		List<String> list2 = new ArrayList<String>();
+		list2.add("k7");
+		list2.add("k5");
+		list2.add("pride");
+		list2.add("지프");
+
+		map.put("현대차", list1);
+		map.put("기아차", list2);
+		System.out.println(map);
+		String a;
+		for (int i = 0; i < map.get("현대차").size(); i++) {
+			a = map.get("현대차").get(i);
+			System.out.println(a);
+		}
+		System.out.println("##########################");
+		Set<String> set = map.keySet();
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			String key = it.next();
+			List<String> val = map.get(key);
+			System.out.println(key + " : " + val);
+
+		}
+
+	}
+
+	public void me2() {
+		// 1. map 객체를 만듬
+		// 2. key : integer v : String
+		Map<Integer, String> map = new HashMap<Integer, String>();
+		map.put(1, "kim");
+		map.put(0, "lee");
+		map.put(2, "park");
+		map.put(1, "kang");// 기존 kim -> kang
+		String a = map.get(1);
+		System.out.println(a);
+		a = map.get(2);
+		System.out.println(a);
+		a = map.get(0);
+		System.out.println(a);
+		System.out.println(map);
+		map.replace(1, "kim");
+		System.out.println(map);
+		Set<Integer> set = map.keySet();
+		Iterator<Integer> it = set.iterator();
+		while (it.hasNext()) {
+			Integer key = it.next();
+			String val = map.get(key);
+			System.out.println(key + " : " + val);
+
+		}
+
+	}
+
+	public void me1() {
+		// 1.map,hashmap
+		// 2.map 객체를 만드세요.
+		// 단key:String, value : integer
+		Map<String, Integer> map = new HashMap<String, Integer>();
+
+		// map에 데이터 입력
+		map.put("중력가속도", 9);
+		map.put("우리집 비밀번호", 12345);
+		map.put("서울과 부산간의거리", 300);
+		Integer a = map.get("중력가속도");
+		System.out.println(a);
+		int b = map.get("우리집 비밀번호");
+		System.out.println(b);
+		int c = map.get("서울과 부산간의거리");
+		System.out.println(c);
+		System.out.println(map);
+		map.replace("서울과 부산간의거리", 280);
+		System.out.println(map);
+		Set<String> keyset = map.keySet();
+		Iterator<String> it = keyset.iterator();
+		while (it.hasNext()) {
+			String key = it.next();
+			int val = map.get(key);
+
+			System.out.println(key + " : " + val);
+
+		}
+		Collection<Integer> val = map.values();
+		Iterator<Integer> it2 = val.iterator();
+		while (it2.hasNext()) {
+			Integer val2 = it2.next();
+			System.out.println(val2);
+
+		}
+
+	}
+
+}

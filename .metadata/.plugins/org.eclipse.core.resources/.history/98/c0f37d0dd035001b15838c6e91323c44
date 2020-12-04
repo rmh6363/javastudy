@@ -1,0 +1,19 @@
+package com.naver;
+
+public class MenuDAO {
+	private final String DRIVER = "oracle.jdbc.OracleDriver";
+	private final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
+	private final String NAME = "ezen";
+	private final String PW = "ezen";
+	
+	public MenuDAO() {
+		try {
+			Class.forName(DRIVER);
+			System.out.println("드라이버 로딩 성공");
+		} catch (ClassNotFoundException e) {
+			System.out.println("드라이버 로딩 실패");
+			e.printStackTrace();
+		}
+	}
+
+}

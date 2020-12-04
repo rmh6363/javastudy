@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="a.html" method="get">       
+
+   <input name = "id" >
+   <br>
+   <input type="password"        name = "pw" >
+   <br>
+   <input type="submit" value="로그인">
+   
+</form>
+
+   <form action="b.html" method="post">
+   <input name = "id">
+   <br>
+   <input type="password"  name = "pw">
+   <br>
+   <input type="submit" value="로그인"> 
+
+	
+</form>
+   
+   
+
+</body>
+</html>

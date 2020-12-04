@@ -1,0 +1,20 @@
+package kr.co.ezen;
+
+import java.lang.reflect.Method;
+
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		String Testclass = "com.naver.packege.A";
+		try {
+			Class<?> testClass = Class.forName(Testclass);
+			Object newObj = testClass.newInstance();
+			Method m = testClass.getDeclaredMethod("show", boolean.class);
+			m.invoke(newObj, true);
+		} catch (Exception e) {
+		}
+
+	}
+
+}

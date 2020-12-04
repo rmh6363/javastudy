@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>회원가입 페이지</h1>
+
+<form action="a.html" method="post">
+<label for="id">아이디: </label>
+<input id ="id" name="id"> <button>중복검사</button>
+<br>
+<label for="pw1">비밀번호: </label>
+<input id = "pw1" type="password" name = "pw1">
+<br>
+<label for="pw2">비밀번호(확인): </label>
+<input id = "pw2" type="password" name = "pw2">
+<br>
+<label for="name">이름 : </label>
+<input id="name"  name = "name">
+<br>
+<label for = "brith">생년월일:</label>
+<input id = "birth" type="date" name = "birth">
+<br>
+<label for = "tel">전화번호:</label>
+<input id ="tel" type="tel" name= "tel">
+<br>
+<label for = "email">e-메일:</label>
+<input id="email" type="email" name= "email">
+<br>
+<label>최종학력:</label>
+<br>
+<input type="radio" name="school" value="es"><label for = "es">초졸</label>
+<br>
+<input type="radio" name = "school" value="ms" checked="checked"> <label for = "ms">중졸</label>
+<br>
+<input type="radio" name = "school" value="hs"> <label for = "hs">중졸</label>고졸
+<br>
+<input type="radio" name = "school" value="us"> <label for = "hs">중졸</label>대졸
+<br>
+<input type="submit" value="가입">
+<br>
+
+</form>
+</body>
+</html>

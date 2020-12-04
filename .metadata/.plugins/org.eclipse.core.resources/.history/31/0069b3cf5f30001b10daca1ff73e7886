@@ -1,0 +1,22 @@
+package kr.co.ezen;
+
+import java.util.Scanner;
+
+import com.naver.Command;
+import com.naver.InsertCommand;
+import com.naver.MemberDAO;
+import com.naver.MemberDTO;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		MemberDTO dto = new MemberDTO();
+		MemberDAO dao = new MemberDAO();
+		Command[] menu = {new InsertCommand()};
+		
+		
+
+	}
+
+}

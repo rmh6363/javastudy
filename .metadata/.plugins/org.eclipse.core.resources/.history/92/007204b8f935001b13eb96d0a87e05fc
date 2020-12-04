@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="b.html" method="post">
+<input type="text" placeholder="id를 입력해주세요">
+<br>
+<input type="password" placeholder="pw를 입력해주세요"> 
+</form>   
+   
+
+</body>
+</html>
