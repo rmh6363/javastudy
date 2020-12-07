@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 페이지</title>
+</head>
+<body>
+<form action="insert.do" method="post"></form>
+<h1>회원가입</h1>
+<label for = "id">아이디:</label>
+<input id = "id" name = "id"> <br>
+<label for ="pw">비밀번호:</label>
+<input id = "pw" name="pw"> <br>
+<label for ="pw2">비밀번호 확인:</label>
+<input id = "pw2" name="pw2"> <br>
+<label for = "name">이름:</label>
+<input id = "name" name = "name"> <br>
+<label for = "birth">생일:</label>
+<input id = "birth" type="date" name ="birth"> <br>
+<label for = "tel">전화번호:</label>
+<input id = "tel" name = "tel"> <br>
+<label for = "email">이메일:</label>
+<input id = "email" name = "email"> <br>
+<label>학력</label> <br>
+<input type="radio" name = "school" value="es" id = "es"> <label for = "es">초등학교</label> <br>
+<input type="radio" name = "school" value="ms" id = "ms"> <label for = "ms">중등학교</label> <br>
+<input type="radio" name = "school" value="hs" id = "hs" checked="checked"> <label for = "hs">고등학교</label> <br>
+<input type="radio" name = "school" value="us" id = "us"> <label for = "us">대학교</label> <br>
+<label>취미:</label> <br>
+<input type="checkbox" name = "hobby" value="climb" id="climb" checked="checked"> <label for = "climb">등산</label> <br>
+<input type="checkbox" name = "hobby" value="read" id="read"> <label for = "read">독서</label> <br>
+<input type="checkbox" name = "hobby" value="soccer" id="soccer"> <label for = "soccer">축구</label> <br>
+<label>자기 소개</label> <br> <br>
+<textarea rows="5" name = "myint"></textarea>
+<br>
+
+<input type="submit" value="가입">
+</body>
+</html>
