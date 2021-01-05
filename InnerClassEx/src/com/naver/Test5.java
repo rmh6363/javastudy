@@ -1,0 +1,23 @@
+package com.naver;
+
+public class Test5 {
+	//익명의 내부 클래스는 class 키워드가 없음
+	//변수를 선언하면 쓰는 익명의 내부 클래스 : 가짜 익명의 내부클래스
+	//변수선언없이 사용하는 익명의 내부 클래스 : 진짜 익명의 내부클래스
+	
+	private int a;
+	
+	public Inter1 ano = new Inter1() {
+		
+		@Override
+		public void me1() {
+			// TODO Auto-generated method stub
+		}
+	};
+		
+	
+		
+	
+
+}
+

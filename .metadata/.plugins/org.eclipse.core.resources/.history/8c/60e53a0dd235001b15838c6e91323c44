@@ -1,0 +1,85 @@
+package kr.co.ezen;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+import com.naver.Command;
+import com.naver.MenuDAO;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// 문자열을 이용해서 객체 만드는 방법 : reflection
+		// Spring Framework
+		// jsp/servelet
+
+//		Map<Integer, Command> menus = new HashMap<>();
+//		menus.put(0, new InsertCommand());
+//		menus.put(1, new selectCommand());
+//		menus.put(2, new updateCommand());
+//		menus.put(3, new DeleteCommand());
+//		menus.put(4, new EndCommand());
+
+		Scanner sc = new Scanner(System.in);
+		Map<Integer, String> menus = new HashMap<Integer, String>();
+		MenuDAO dao = new MenuDAO();
+		List<String> list = dao.select();
+		for (int i = 0; i < list.size(); i++) {
+			menus.put(i, list.get(i));
+		}
+//		
+//		menus.put(0, "com.naver.InsertCommand");
+//		menus.put(1, "com.naver.SelectCommand");
+//		menus.put(2, "com.naver.UpdateCommand");
+//		menus.put(3, "com.naver.DeleteCommand");
+//		menus.put(4, "com.naver.EndCommand");
+
+		while (true) {
+
+			System.out.println("메뉴를선택하세요.");
+			StringBuffer sb = new StringBuffer();
+			for (int i = 0; i < list.size(); i++) {
+				String fullname = list.get(i);
+				Class.forName(fullname);
+			}
+			int idx = sc.nextInt();
+
+			String str = menus.get(idx);
+			sc.nextLine();
+			try {
+				Class<?> testClass = Class.forName(str);
+				testClass = Class.forName(menus.get(idx));
+				Constructor<?> cons = testClass.getConstructor();
+				Command com = (Command) cons.newInstance();
+				com.execute(sc);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (NoSuchMethodException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SecurityException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+	}
+
+}

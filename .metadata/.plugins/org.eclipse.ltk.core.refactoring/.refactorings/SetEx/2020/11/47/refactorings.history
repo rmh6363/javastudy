@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Apple.java&apos; to &apos;ListEx/src/kr.co.ezen&apos;&#x0D;&#x0A;- Original project: &apos;SetEx&apos;&#x0D;&#x0A;- Destination element: &apos;ListEx/src/kr.co.ezen&apos;&#x0D;&#x0A;- Original element: &apos;com.naver.Apple.java&apos;" description="Copy compilation unit" destination="=ListEx/src&lt;kr.co.ezen" element1="/src&lt;com.naver{Apple.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1605487563117" units="1" version="1.0"/>
+</session>

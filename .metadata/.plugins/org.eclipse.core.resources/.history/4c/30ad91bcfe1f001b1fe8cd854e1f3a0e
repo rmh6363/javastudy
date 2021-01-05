@@ -1,0 +1,35 @@
+package com.naver;
+
+public class Hero {
+	Weapon[] Weapons;
+	Weapon w;
+	
+
+	public Hero() {
+		
+		Weapons = new Weapon[] {new Bow(1, "È°"),new Sword(5, "°Ë"),new Gun(10, "ÃÑ")};
+		
+		w = Weapons[2];
+		
+		
+	}
+
+	public void useWeapon(Weapon[] wp) {
+		
+	}
+
+	public void attack(Monster mon) {
+		w.attack(mon);
+	}
+
+	public void changeWeapon(Weapon[] wp) {
+		
+	}
+
+	public Hero(Weapon[] weapons, Weapon w) {
+		super();
+		Weapons = weapons;
+		this.w = w;
+	}
+
+}

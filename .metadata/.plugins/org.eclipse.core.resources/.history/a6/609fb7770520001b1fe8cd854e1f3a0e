@@ -1,0 +1,34 @@
+package com.daum;
+
+public class Hero {
+	Weapon[] weapon;
+	Weapon w;
+	public Hero() {
+		
+	}
+	public Weapon[] getWeaponarr() {
+		return weapon;
+	}
+	public void setWeaponarr(Weapon[] weaponarr) {
+		this.weapon = weaponarr;
+	}
+	public Weapon getW() {
+		return w;
+	}
+	public void setW(Weapon w) {
+		this.w = w;
+	}
+	public Hero(Weapon[] weaponarr, Weapon w) {
+		super();
+		this.weapon = weaponarr;
+		this.w = w;
+	}
+	public void changeWeapon() {
+		weapon[0];
+	}
+	public void attack(Monster mon) {
+		
+	}
+	
+
+}

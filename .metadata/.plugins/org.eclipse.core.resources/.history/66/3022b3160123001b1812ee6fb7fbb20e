@@ -1,0 +1,15 @@
+package com.naver;
+
+public class Sword extends Weapon{
+	public static void name() {
+		
+	}
+	public Sword() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+
+
+}

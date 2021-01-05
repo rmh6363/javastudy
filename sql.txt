@@ -1,0 +1,112 @@
+객체------
+계정(User)
+table
+함수
+sequence
+index
+trigger
+procedure
+------------------
+데이터
+데이터 입력, 조회, 수정, 삭제 .....객체x
+
+
+
+create 생성
+alter 수정
+drop 삭제
+conn 연결
+grant 허가
+revoke 취소 해제
+
+객체를 생성 수정 삭제 하는 SQL문을 
+DDL(Data Definition Language)
+create alter drop
+
+보안적인 요소를 담고 있는 SQL문
+DCL(Data Control Language)
+Grant, Revoke
+
+TCL
+Commit Rollback
+
+DML
+insert, select, update, delete
+================================
+
+create
+alter
+drop
+grant
+revoke
+
+insert
+select
+update
+delete
+
+commit
+rollback
+
+
+sql문 입력할 때는 대소문자 구분하지 않음.
+데이터는 대소문자 구분함
+숫자를 제외한 모든 자료형은 '작은 따음표'에 넣어서 입력.
+
+
+
+create table member(
+mid varchar2(6),
+name varchar2(15),
+job varchar2(10),
+birth date
+);
+
+INSERT INTO member (mid, name ,job,birth) VALUES ('m005','kang','a','2000-10-03');
+
+
+
+INSERT INTO member(mid,name,job) VALUES ('m003','lee','a');
+
+================
+CRUD
+================
+
+이클립스에서 오라클 연동 작업을 하기 위해서
+1. 클래스 패스 확인
+  - window - references - java - build path - class path
+
+2. oraclexe 폴더
+  - C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib	
+  - ojdbc6.jar복사
+
+3. class path에 붙여넣기
+  - C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext
+
+4. cmd에서 작업한 내용을 이클립스에서 하려면 connection이 필요함.
+  - show view - other -database -  explorer 추가
+ - explorer추가
+  database connections 우클릭 new
+   oracle - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+계정을 생성할 때는
+일정 자격이 있는
+계정에서 만듦

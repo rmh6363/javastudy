@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 25 resources" deleteContents="false" description="Delete 25 resources" element1="/ArratEx2" element10="/InstansEx2" element11="/MethodEx" element12="/MethodTest4" element13="/OperaterEx" element14="/OperaterEx2" element15="/OverloadingEx" element16="/Star" element17="/StaticEx" element18="/StringEx" element19="/SwitchCaseEx" element2="/ArrayEx" element20="/Test" element21="/Test_a" element22="/TypeEx" element23="/VaragsEx" element24="/VariableEx" element25="/WhileEx" element3="/ConstructorEx" element4="/Fighting" element5="/ForEx" element6="/HelloWorld" element7="/HiWorld" element8="/IfEx" element9="/InstanceEx" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="25" stamp="1604622607439"/>
+</session>

@@ -1,0 +1,24 @@
+package kr.co.ezen;
+
+import com.naver.Test;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		Thread ct= Thread.currentThread();
+		String name = ct.getName();
+		System.out.println(name);
+		System.out.println("main start");
+		Test t1 = new Test("¹®µµ");
+		Test t2 = new Test("·Îº¿");
+		
+		t1.start();
+		t2.start();
+		
+		System.out.println("main out");
+		
+		
+
+	}
+
+}

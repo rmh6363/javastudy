@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
 content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.io.Reader"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.lang.Readable"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.io.BufferedReader"><rhs name\="java.io.BufferedReader"/></lhs><lhs name\="java.io.File"><rhs name\="java.io.File"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="javax.naming.Context"><rhs name\="javax.naming.InitialContext"/></lhs><lhs name\="kr.co.domain.CommandAction"><rhs name\="kr.co.domain.CommandAction"/></lhs><lhs name\="kr.co.dao.MemberDAO"><rhs name\="kr.co.dao.MemberDAO"/></lhs><lhs name\="kr.co.domain.MemberDTO"><rhs name\="kr.co.domain.MemberDTO"/></lhs><lhs name\="kr.co.command.Command"><rhs name\="kr.co.command.InsertUICommand"/><rhs name\="kr.co.command.InsertCommand"/><rhs name\="kr.co.command.ListCommand"/></lhs><lhs name\="kr.co.command.InsertCommand"><rhs name\="kr.co.command.InsertCommand"/></lhs><lhs name\="kr.co.command.ListCommand"><rhs name\="kr.co.command.ListCommand"/></lhs><lhs name\="kr.co.command.InsertUICommand"><rhs name\="kr.co.command.InsertUICommand"/></lhs><lhs name\="kr.co.ezen.LoginDTO"><rhs name\="kr.co.ezen.LoginDTO"/></lhs><lhs name\="kr.co.command.LoginDTO"><rhs name\="kr.co.command.LoginDTO"/></lhs><lhs name\="kr.co.ezen.MemberDAO"><rhs name\="kr.co.ezen.MemberDAO"/></lhs><lhs name\="kr.co.dao.CommandAction"><rhs name\="kr.co.dao.CommandAction"/></lhs><lhs name\="kr.co.controller.CommandAction"><rhs name\="kr.co.controller.CommandAction"/></lhs><lhs name\="kr.co.dto.MemberDTO"><rhs name\="kr.co.dto.MemberDTO"/></lhs><lhs name\="kr.co.domain.BoardDTO"><rhs name\="kr.co.domain.BoardDTO"/></lhs><lhs name\="kr.co.dao.BoardDAO"><rhs name\="kr.co.dao.BoardDAO"/></lhs></history>
 content_assist_number_of_computers=20
+=======
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
 eclipse.preferences.version=1
 org.eclipse.jdt.internal.ui.navigator.layout=2
 org.eclipse.jdt.internal.ui.navigator.librariesnode=true
 org.eclipse.jdt.ui.formatterprofiles.version=20
+<<<<<<< HEAD
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+=======
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true

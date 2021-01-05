@@ -1,0 +1,30 @@
+package com.daum;
+
+public class Chapion {
+	Position[] pt;
+	Position p;
+	public Chapion() {
+		// TODO Auto-generated constructor stub
+	}
+	public Position[] getPt() {
+		return pt;
+	}
+	public void setPt(Position[] pt) {
+		this.pt = pt;
+	}
+	public Position getP() {
+		return p;
+	}
+	public void setP(Position p) {
+		this.p = p;
+	}
+	public Chapion(Position[] pt, Position p) {
+		super();
+		this.pt = pt;
+		this.p = p;
+	}
+	public void attack(Baron nasher) {
+		p.attack(nasher);
+	}
+
+}

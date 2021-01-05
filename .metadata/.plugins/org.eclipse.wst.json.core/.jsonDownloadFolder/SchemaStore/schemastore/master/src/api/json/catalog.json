@@ -202,12 +202,20 @@
     },
     {
       "name": "batect.yml",
+<<<<<<< HEAD
       "description": "Batect configuration file",
+=======
+      "description": "batect configuration file",
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
       "fileMatch": [
         "batect.yml",
         "batect-bundle.yml"
       ],
+<<<<<<< HEAD
       "url": "https://ide-integration.batect.dev/v1/configSchema.json"
+=======
+      "url": "https://batect.dev/configSchema.json"
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
     },
     {
       "name": "bamboo-spec",
@@ -785,6 +793,7 @@
       "url": "https://json.schemastore.org/pm2-ecosystem"
     },
     {
+<<<<<<< HEAD
       "name": ".esmrc.json",
       "description": "Configuration files for the esm module/package in Node.js",
       "fileMatch": [
@@ -797,6 +806,8 @@
       "url": "https://json.schemastore.org/esmrc"
     },
     {
+=======
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
       "name": "Esquio",
       "description": "JSON schema for Esquio configuration files",
       "url": "https://json.schemastore.org/esquio"
@@ -818,6 +829,7 @@
       "url": "https://json.schemastore.org/electron-builder"
     },
     {
+<<<<<<< HEAD
       "name": "evcc.yaml",
       "description": "JSON schema for evcc configuration file.",
       "fileMatch": [
@@ -826,6 +838,8 @@
       "url": "https://raw.githubusercontent.com/andig/evcc/master/schema.json"
     },
     {
+=======
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
       "name": "Expo SDK",
       "description": "JSON schema for Expo SDK app manifest",
       "fileMatch": [
@@ -2033,10 +2047,14 @@
       "fileMatch": [
         "ui5.yaml",
         "*-ui5.yaml",
+<<<<<<< HEAD
         "*.ui5.yaml",
         "ui5-deploy.yaml",
         "ui5-dist.yaml",
         "ui5-local.yaml"
+=======
+        "*.ui5.yaml"
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
       ],
       "url": "https://sap.github.io/ui5-tooling/schema/ui5.yaml.json"
     },
@@ -2613,6 +2631,7 @@
         "beau.yml"
       ],
       "url": "https://beaujs.com/schema.json"
+<<<<<<< HEAD
     },
     {
       "name": "comet",
@@ -2622,6 +2641,8 @@
         "*.comet.yml"
       ],
       "url": "https://json.schemastore.org/comet"
+=======
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
     }
   ]
 }

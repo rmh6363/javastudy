@@ -1,0 +1,16 @@
+create table test(
+name varchar2(3),
+age number(3)
+)
+
+insert into test values('kim','20')
+insert into test values('lee','40')
+insert into test values('cho','23')
+select * from test
+commit
+
+test 테이블의
+모든 레코드의
+모드 컬럼값을
+조회하시오
+select * from test

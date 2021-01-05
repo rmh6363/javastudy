@@ -1,0 +1,12 @@
+package kr.co.ezen;
+
+import com.naver.Test2;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		Test2.MemberClass mc1 = 
+
+	}
+
+}

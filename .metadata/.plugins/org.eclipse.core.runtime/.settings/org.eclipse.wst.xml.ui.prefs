@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart.lastActivePage=1
+=======
+overriddenByCSS=,cdataBorder,cdataText,commentBorder,commentText,declBorder,doctypeExternalId,doctypeExternalPubref,doctypeExtrenalSysref,doctypeName,entityReference,piBorder,piContent,tagAttributeEquals,tagAttributeName,tagAttributeValue,tagBorder,tagName,xmlContent,
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05

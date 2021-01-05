@@ -1,0 +1,28 @@
+package com.naver;
+
+public class Bow extends Weapon{
+	public Bow() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Bow(int power, String name) {
+		super(power, name);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Bow(int power) {
+		super(power);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void img() {
+		System.out.println("화살이 빗발칩니다.");
+		
+	}
+	
+	
+
+
+
+}

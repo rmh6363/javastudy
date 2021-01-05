@@ -1,0 +1,64 @@
+package kr.co.ezen;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+
+import com.naver.Command;
+import com.naver.DeleteCommand;
+import com.naver.EndCommand;
+import com.naver.UpdateCommand;
+import com.naver.InsertCommand;
+import com.naver.MemberDTO;
+import com.naver.SelectCommand;
+
+public class Main {
+	public static void main(String[] args) {
+			
+		Scanner sc = new Scanner(System.in);
+		Map<Integer, List<Command>> map = new HashMap<Integer, List<Command>>();
+		List<Command> list = new ArrayList<Command>();
+		list.add(new InsertCommand());
+		List<Command> list2 = new ArrayList<Command>();
+		list.add(new SelectCommand());
+		List<Command> list3 = new ArrayList<Command>();
+		list.add(new UpdateCommand());
+		List<Command> list4 = new ArrayList<Command>();
+		list.add(new DeleteCommand());
+		List<Command> list5 = new ArrayList<Command>();
+		list.add(new EndCommand());
+		
+		
+		map.put(0, list);
+		map.put(1, list2);
+		map.put(3, list3);
+		map.put(4, list4);
+		map.put(5, list5);
+		
+		
+	
+	
+
+
+		
+		while (true) {
+			System.out.println("메뉴를 선택하세요");
+			for (int i = 0; i < map.size(); i++) {
+				System.out.print(map.get(i));
+			}
+			try {
+				System.out.println();
+				int index=sc.nextInt();
+				sc.nextLine();
+				map.get(index).exe
+				
+				
+			} catch (Exception e) {
+				System.out.println("0~4 중 하나를 선택하세요.");
+			}
+		}
+	}
+}

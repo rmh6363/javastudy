@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
 	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="47"/>
 		<item key="DIALOG_Y_ORIGIN" value="-5"/>
@@ -9,11 +10,15 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="selection" value="timeout"/>
+=======
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+<<<<<<< HEAD
 		<list key="findhistory">
 			<item value="Timeout"/>
 			<item value="timeout"/>
@@ -28,6 +33,25 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="-216"/>
 		<item key="DIALOG_Y_ORIGIN" value="48"/>
+=======
+		<item key="selection" value="null"/>
+		<list key="findhistory">
+			<item value="a"/>
+			<item value="&#x09;&#x09;}"/>
+			<item value="&#x09;&#x09;}System.out.println();"/>
+			<item value="null"/>
+			<item value="me2"/>
+			<item value="me"/>
+			<item value="what"/>
+		</list>
+		<list key="replacehistory">
+			<item value="hello"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="368"/>
+		<item key="DIALOG_Y_ORIGIN" value="124"/>
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

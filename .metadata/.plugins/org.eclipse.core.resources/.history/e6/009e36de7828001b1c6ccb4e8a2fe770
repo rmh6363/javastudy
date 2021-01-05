@@ -1,0 +1,30 @@
+package kr.co.ezen;
+
+import com.naver.Test;
+import com.naver.Test2;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+//		Thread ct =Thread.currentThread();
+//		String name=ct.getName();
+//		System.out.println(name);
+		//1. Test클래스를 Thread클래스로 만들었음.
+		//2. Test클래스를 이용해서 Thread 객체를 만들었음.
+		//3. Test클래스를 이용해서 Thread를 만들겠음.
+		System.out.println("main start");
+		
+		Test t1 = new Test();
+		Test2 t2 = new Test2();
+		
+		t1.start();
+		t2.start();
+		System.out.println("main end");
+		
+		
+		
+		
+
+	}
+
+}

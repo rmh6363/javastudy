@@ -1,0 +1,53 @@
+package com.naver;
+
+public class Test extends Thread{
+	
+
+	public Test() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Test(Runnable target, String name) {
+		super(target, name);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Test(Runnable target) {
+		super(target);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Test(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Test(ThreadGroup group, Runnable target, String name, long stackSize) {
+		super(group, target, name, stackSize);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Test(ThreadGroup group, Runnable target, String name) {
+		super(group, target, name);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Test(ThreadGroup group, Runnable target) {
+		super(group, target);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Test(ThreadGroup group, String name) {
+		super(group, name);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void run() {
+		
+	}
+	
+	
+
+}

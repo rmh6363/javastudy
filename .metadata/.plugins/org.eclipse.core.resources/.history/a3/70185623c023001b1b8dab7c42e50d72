@@ -1,0 +1,17 @@
+package kr.co.ezen;
+
+import com.naver.Test2;
+import com.naver.Test3;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		Test2.MemberClass mc1 = new Test2().new MemberClass();
+		mc1.mc1();
+		Test3.StatiInnerClass sc = new Test3.StatiInnerClass();
+		sc.name1();
+				
+
+	}
+
+}

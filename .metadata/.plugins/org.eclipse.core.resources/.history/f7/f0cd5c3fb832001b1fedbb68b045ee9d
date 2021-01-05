@@ -1,0 +1,14 @@
+package com.naver;
+
+import java.util.Scanner;
+
+public interface Command {
+	
+	public final String DRIVER = "oracle.jdbc.OracleDriver";
+	public final String URL ="jdbc:oracle:thin:@localhost:1521:xe";
+	public final String USER = "ezen";
+	public final String PASSWORD = "ezen";
+	
+	public abstract void execute(Scanner sc);
+
+}

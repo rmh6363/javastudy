@@ -1,0 +1,34 @@
+package Test;
+
+public class Weapon {
+	private int power;
+	private String name;
+	public Weapon(int power, String name) {
+		super();
+		this.power = power;
+		this.name = name;
+	}
+	public int getPower() {
+		return power;
+	}
+	public void setPower(int power) {
+		this.power = power;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void attack(Monster mon) {
+		int bhp = mon.getHp();
+		int ahp = bhp - power;
+		mon.setHp(ahp);
+		System.out.println("monster ÀÇhp : "+ahp);
+	}
+	@Override
+	public String toString() {
+		return getName();
+	}
+
+}

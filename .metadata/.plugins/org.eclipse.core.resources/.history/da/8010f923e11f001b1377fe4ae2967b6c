@@ -1,0 +1,22 @@
+package com.naver;
+
+public class Sm5 extends Car {
+	
+	public Sm5() {
+		// TODO Auto-generated constructor stub
+	}
+	public Sm5(String model, String name, int price) {
+		super(model, name, price);
+		// TODO Auto-generated constructor stub
+	}
+	public void gugudan(int num) {
+		String a = "»ï¼º#lg#huawei#xiaomi#apple";
+		String[] sp = a.split("#");
+		for (int i = 0; i < sp.length; i++) {
+			System.out.println(sp[i]);
+		}
+		
+		
+	}
+	
+}

@@ -1,0 +1,15 @@
+package com.daum;
+
+public class Baron {
+	private int hp;
+
+	public int getHp(int hp) {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+	
+
+}

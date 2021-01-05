@@ -1,0 +1,81 @@
+package kr.co.ezen;
+
+import java.lang.reflect.Constructor;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+import com.naver.Command;
+import com.naver.DeleteCommand;
+import com.naver.EndCommand;
+import com.naver.InsertCommand;
+import com.naver.selectCommand;
+import com.naver.updateCommand;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		//문자열을 이용해서 객체 만드는 방법 : reflection
+		//Spring Framework
+		//jsp/servelet
+		
+//		Map<Integer, Command> menus = new HashMap<>();
+//		menus.put(0, new InsertCommand());
+//		menus.put(1, new selectCommand());
+//		menus.put(2, new updateCommand());
+//		menus.put(3, new DeleteCommand());
+//		menus.put(4, new EndCommand());
+		
+		Scanner sc = new Scanner(System.in);
+		Map<Integer, String> menus = new HashMap<Integer,String>();
+//		MenuDAO dao = new MenuDAP();
+//		List<String> list dao.select();
+//		for (int i = 0; i < list.size(); i++) {
+//			menus.put(i, list.get(i));
+//		}
+		
+		menus.put(0, "com.naver.InsertCommand");
+		menus.put(1, "com.naver.SelectCommand");
+		menus.put(2, "com.naver.UpdateCommand");
+		menus.put(3, "com.naver.DeleteCommand");
+		menus.put(4, "com.naver.EndCommand");
+		System.out.println("메뉴를 선택하세요.");
+		System.out.println("0:등록, 1:조회,2:수정,3:삭제,4:종료");
+		int idx = sc.nextInt();	
+		sc.nextLine();
+		for (int i = 0; i < menus.size(); i++) {
+			Class<?> testClass;
+			try {
+				testClass = Class.forName(menus.get(i));
+				Constructor<?> cons = testClass.getConstructor();
+				Command com = (Command)cons.newInstance();
+				com.execute(sc);
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+	
+
+		
+			
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

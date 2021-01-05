@@ -1,18 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.wst.web.ui"/>
 		</list>
 	</section>
+=======
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
 	<section name="SmartImportWizard">
 		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
 		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+<<<<<<< HEAD
 			<item value="C:\workspace_jsp\Test15"/>
 		</list>
 	</section>
+=======
+			<item value="D:\workspace_java\ArratEx2"/>
+			<item value="D:\workspace_java\StringEx"/>
+			<item value="C:\project\TPjava\TeamProjectMMS2"/>
+			<item value="D:\workspace_java\MapEx"/>
+			<item value="D:\workspace_java\SetEx"/>
+			<item value="C:\workspace_java\InputOutputEx\InputOutputEx"/>
+			<item value="C:\workspace_java\MMS1"/>
+			<item value="C:\workspace_java"/>
+			<item value="C:\workspace_java\StringEx"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="659"/>
+		<item key="DIALOG_Y_ORIGIN" value="341"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
+		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1607046753091"/>
+	</section>
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
 </section>

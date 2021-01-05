@@ -1,0 +1,13 @@
+package com.naver;
+
+public interface Bow{
+	public static void name() {
+		
+	}
+	
+	
+	
+
+
+
+}

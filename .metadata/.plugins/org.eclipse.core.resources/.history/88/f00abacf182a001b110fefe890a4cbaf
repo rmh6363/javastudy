@@ -1,0 +1,158 @@
+package com.naver;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.Reader;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+public class Test {
+	
+	public void me4() {
+		//InputStream - OutputStream
+		//FileInputStream - FileoutputStream
+		// pair를 맞춘다
+		// pair를 안 맞추는 이유 : 하나는 많이 사용 되는데, 다른 것은 거의 사용을 안 함.
+		// BufferedReader
+		// Scanner
+		
+		Reader in = null;
+		BufferedReader br = null;
+		try {
+			in = new FileReader("abc.txt");
+			br = new BufferedReader(in);
+			String msg = br.readLine();
+			System.out.println(msg);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null) {
+					br.close();
+				}
+				if (in != null) {
+					in.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	public void me3() {
+		Reader in = null;
+		Writer out = null;
+		try {
+			out = new FileWriter("C:"+File.separator+"abc.txt");
+			List<String> list = new ArrayList<String>();
+			list.add("1");
+			list.add("2");
+			list.add("3");
+			list.add("4");
+			list.add("목요일");
+			list.add("5");
+			for (int i = 0; i < list.size(); i++) {
+				out.write(list.get(i));
+				out.write(System.getProperty("line.separator"));
+			}
+			out.flush();
+			in = new FileReader("C:"+File.separator+"abc.txt");
+			char[] arr = new char[1024];
+			int length = -1;
+			while (true) {
+				length = in.read(arr);
+				if (length == -1) {
+					break;
+				}
+				for (int i = 0; i < length; i++) {
+					System.out.print(arr[i]);
+				}
+			}
+		
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (in != null) {
+					in.close();
+				}
+				if (out != null) {
+					out.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+	public void me2() {
+		Reader in = null;
+		try {
+			in = new FileReader("C:"+File.separator+"ss.txt");
+			char[] arr = new char[1024];
+			int length = -1;
+			while (true) {
+				length = in.read(arr);
+				if (length == -1) {
+					break;
+				}
+				for (int i = 0; i < length; i++) {
+					System.out.print(arr[i]);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (in != null) {
+					in.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		
+	}
+
+	public void me1() {
+		Writer out = null;
+		try {
+			out = new FileWriter("C:" + File.separator + "asdf.txt");
+			Set<String> set = new HashSet<String>();
+			set.add("가");
+			set.add("나");
+			set.add("다");
+			set.add("라");
+			Iterator<String> it = set.iterator();
+			while (it.hasNext()) {
+				String string = it.next();
+				System.out.println(string);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (out != null) {
+					out.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+}

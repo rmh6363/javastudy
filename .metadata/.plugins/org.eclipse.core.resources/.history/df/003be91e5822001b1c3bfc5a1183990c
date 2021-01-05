@@ -1,0 +1,15 @@
+package Test;
+
+public class Swrod extends Weapon{
+
+	public Swrod() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Swrod(String name, int power) {
+		super(name, power);
+		// TODO Auto-generated constructor stub
+	}
+
+}

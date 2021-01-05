@@ -1,0 +1,17 @@
+package com.naver;
+
+public class Test {
+	
+	public void me1() {
+		for (int i = 0; i < 100; i++) {
+			System.out.println(i);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

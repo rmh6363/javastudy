@@ -1,0 +1,16 @@
+package com.naver;
+
+public class Sonata extends Car {
+	public Sonata() {
+	}
+
+	public Sonata(String model, String name, int price) {
+		super(model, name, price);
+	}
+	
+	public void me1() {
+		System.out.println(getModel());
+		
+	}
+
+}

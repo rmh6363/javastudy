@@ -1,0 +1,11 @@
+package kr.co.ezen;
+
+public class MainEx2 {
+	public static void main(String[] args) {
+		//reflection
+		//full pakage name : 패키지와 클래스를 같이 사용하는 것
+		//com.naver.InsertCommand
+		Class.forName("com.naver.InsertCommand");
+	}
+
+}

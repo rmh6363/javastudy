@@ -1,0 +1,26 @@
+package com.naver;
+
+public class Weapon {
+	private int power;
+	
+	public Weapon() {
+		// TODO Auto-generated constructor stub
+	}
+	public void attack(Monster mon) {
+		int bHp = mon.getHp();
+		int aHp = bHp-power;
+		mon.setHp(aHp);
+	}
+	
+	public int getPower() {
+		return power;
+	}
+	public void setPower(int power) {
+		this.power = power;
+	}
+	public Weapon(int power) {
+		super();
+		this.power = power;
+	}
+
+}

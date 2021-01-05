@@ -1,0 +1,11 @@
+eclipse의 workspace 변경
+tomcat 설치 8089포트 ezen ezen
+이클립스에서 servers폴더에 서버생성
+다이나믹 웹 프로젝트 메뉴를 통해 프로젝트 생성
+webcontent 폴더에 a.html 파일생성
+<!doctype html> html5문서의 시작과 끝을 알려주는 태그
+<html><html> : html 문서의 시작과 끝을 알려주는 태그
+<head> <head> 문서의 설정과 관련된 정보를 갖고 있는 태그
+<body><body> 브라우저에 출력해서 클라이언트에게 보여주는 내용을 담고 있는 태그
+a태그 : 원하는 사이트로 이동 혹은 북마크 기능 #? id = ? / href = ? 
+p태그 : 자동 열바꿈

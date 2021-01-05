@@ -1,0 +1,42 @@
+package com.daum;
+
+public class Weapon {
+	private String name;
+	private int hp;
+	private int power;
+	public Weapon() {
+		hp = 100;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getHp() {
+		return hp;
+	}
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+	public Weapon(String name, int hp) {
+		super();
+		this.name = name;
+		this.hp = hp;
+	}
+	
+	public void attack(Monster mon) {
+		int bhp = hp;
+		int ahp = bhp - power;
+		System.out.println("몬스터의 체력 : "+ ahp);
+		
+	}
+	@Override
+	public String toString() {
+		return name;
+	}
+	
+	
+	
+
+}

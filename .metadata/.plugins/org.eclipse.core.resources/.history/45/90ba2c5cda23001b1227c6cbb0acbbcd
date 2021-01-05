@@ -1,0 +1,10 @@
+package com.naver;
+
+public class Test {
+	
+	public void me1() {
+		String msg = null;
+		System.out.println(msg.length());
+	}
+
+}

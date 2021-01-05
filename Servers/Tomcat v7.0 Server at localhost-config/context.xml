@@ -29,6 +29,7 @@
     <!--
     <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
     -->
+<<<<<<< HEAD
 	<Resource 
 		name = "jdbc/oracle11g"
 		auth = "Container"
@@ -41,4 +42,7 @@
 		url = "jdbc:oracle:thin:@localhost:1521:xe"
 	
 	/>
+=======
+
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
 </Context>

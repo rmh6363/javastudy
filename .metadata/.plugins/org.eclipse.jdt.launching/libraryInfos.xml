@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
+<<<<<<< HEAD
     <libraryInfo home="C:\Program Files\Java\jdk1.8.0_261\jre" version="1.8.0_261">
+=======
+    <libraryInfo home="C:\Users\EZEZ\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932\jre" version="14.0.2"/>
+    <libraryInfo home="C:\Users\EZEZ\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932" version="14.0.2"/>
+    <libraryInfo home="C:\Program Files\Java\jdk1.8.0_261" version="1.8.0_261">
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
         <bootpath>
             <entry path="C:\Program Files\Java\jdk1.8.0_261\jre\lib\resources.jar"/>
             <entry path="C:\Program Files\Java\jdk1.8.0_261\jre\lib\rt.jar"/>
@@ -19,6 +25,9 @@
             <entry path="C:\Program Files\Java\jdk1.8.0_261\jre\lib\endorsed"/>
         </endorsedDirs>
     </libraryInfo>
+<<<<<<< HEAD
     <libraryInfo home="C:\Users\user\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932\jre" version="14.0.2"/>
     <libraryInfo home="C:\Users\user\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932" version="14.0.2"/>
+=======
+>>>>>>> c310db4b5f7f83753a6d56109d1464140a0b6f05
 </libraryInfos>

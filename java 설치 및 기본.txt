@@ -1,0 +1,58 @@
+java 개발환경 설치
+
+1. jdk(java development kit) 설치
+   - 자바 개발환경 설정 
+rmh63@naver.com	Njykmy0416!@#
+https://www.oracle.com/java/technologies/javase-downloads.html
+jdk se 1.8(standard edition)
+jdk ee(enterprise edition)
+jdk me(micro edition)
+
+2. ide : eclipse 다운로드 
+enterprise
+
+3. 자바 프로젝트를 저장할 수 있는 공간 생성
+   - workspace_java
+
+4. eclipse의 구조
+   - 이클립스 우측 상단의 [open perspective]를
+클릭하여 java perspective 선택
+   - [ctrl + n]을 누른 후 [자바프로젝트 생성]
+   - 프로젝트명은 첫 글자 대문자, 띄어쓰기 하지 않고
+띄어쓰는 단어 첫 글자 대문자
+   - [ctrl + n]을 누른 후 [package 생성]
+   - 패키지는 다 소문자로.
+   - 회사의 도메인을 거꾸로
+     예) kr.co.ezen, com.naver.com
+   - [ctrl + n]을 누른후  [class]생성
+   - 클래스명은 첫 글자 대문자, 띄어쓰기 하지 않고
+띄어쓰는 단어의 첫 글자 대문자
+   - main() 메서드를 생성.
+     ->[main] 적은후 [ctrl + space]
+  
+5. 콘솔에 "hello world" 출력
+ - console에 출력은
+     [sysout] 적은 후 [ctrl + space]
+     println("hello world);
+     println(11);
+     println("h");
+     println('h');
+     println(true);
+     println(false);
+
+6. 변수
+=는 대입 연산자 : 우측의 값을 좌측의 변수에 대입
+    컴퓨터 프로그래밍에서 = 은
+    a=b
+    b의값을 a에 대입하세요
+    a = 3; 3을 a에 대입 해주세요.
+   변수명(그릇의 이름) = 값 또는 변수;
+    4 = 3; 3을 4에 대입 해주세요.
+     a = 5
+     a에 5를 대입하세요.(x)
+     5를 a에 대입하세요.(o)
+     컴퓨터 프로그래밍의 기준은 왼쪽
+     a = 3+7
+     3과 7을 더하기 한 결과값을 변수 a에 대입하세요.
+     변수(데이터)
+     상수(데이터)

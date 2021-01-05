@@ -1,0 +1,9 @@
+package kr.co.test;
+
+public abstract class Child extends Parent{
+	@Override
+	public void me1() {
+	// TODO Auto-generated method stub
+	
+}
+}

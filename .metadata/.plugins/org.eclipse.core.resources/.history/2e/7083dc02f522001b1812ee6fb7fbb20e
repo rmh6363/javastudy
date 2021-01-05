@@ -1,0 +1,12 @@
+package com.naver;
+
+public interface Inter1 {
+	public Inter1() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	//인터페이스는 public static 메서드와 추상메서드로만 이루어짐 생성자x
+	public final static int AA_BB = 33;
+	public abstract void me1();
+
+}

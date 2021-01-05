@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 8 elements from project &apos;MMS2&apos;&#x0D;&#x0A;- Original project: &apos;MMS2&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     MMS2/src&#x0D;&#x0A;     com.naver.Command.java&#x0D;&#x0A;     com.naver.DB.java&#x0D;&#x0A;     com.naver.DeletCommand.java&#x0D;&#x0A;     com.naver.InsertCommand.java&#x0D;&#x0A;     com.naver.MemberDTO.java&#x0D;&#x0A;     com.naver.SelectCommand.java&#x0D;&#x0A;     com.naver.UpdateCommand.java" description="Delete elements" element1="/src" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1605841099048" subPackages="false" version="1.0"/>
+</session>
