@@ -1,0 +1,178 @@
+package kr.co.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+import kr.co.domain.BoardDTO;
+
+public class BoardDAO {
+	private DataSource dataFactory;
+
+	public BoardDAO() {
+		try {
+			Context ctx = new InitialContext();
+			dataFactory = (DataSource) ctx.lookup("java:comp/env/jdbc/oracle11g");
+		} catch (NamingException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	public void closeAll(ResultSet rs, Connection conn, PreparedStatement pstmt) {
+		try {
+			if (rs != null) {
+				rs.close();
+			}
+			if (pstmt != null) {
+				pstmt.close();
+			}
+			if (conn != null) {
+				conn.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void insert(BoardDTO dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String sql = "insert into myboard(num,author,title,content,repRoot,repStep,repIndent)values(?,?,?,?,?,?,?)";
+		try {
+			conn = dataFactory.getConnection();
+			int num = getNum(conn);
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			pstmt.setString(2, dto.getAuthor());
+			pstmt.setString(3, dto.getContent());
+			pstmt.setString(4, dto.getTitle());
+			pstmt.setInt(5, num);
+			pstmt.setInt(6, 0);
+			pstmt.setInt(7, 0);
+
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeAll(null, conn, pstmt);
+		}
+	}
+
+	private int getNum(Connection conn) {
+		int num = -1;
+		PreparedStatement pstmt = null;
+		String sql = "select NVL2(MAX(num),MAX(num)+1,1) from myboard";
+		ResultSet rs = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				num = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeAll(rs, null, pstmt);
+		}
+		return num;
+	}
+
+	public List<BoardDTO> list() {
+		List<BoardDTO> list = new ArrayList<BoardDTO>();
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+	      String sql = "SELECT num, author, title, "
+	              + "to_char(writeday, 'yyyy/mm/dd') writeday, "
+	              + "readcnt, repRoot, repStep, repIndent  "
+	              + "FROM myboard "
+	              + "ORDER BY repRoot desc, repStep asc";
+		try {
+			conn = dataFactory.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				int num = rs.getInt("num");
+				String title = rs.getString("title");
+				String author = rs.getString("author");
+				String writeday = rs.getString("writeday");
+				int repRoot = rs.getInt("repRoot");
+				int repStep = rs.getInt("repStep");
+				int repIndent = rs.getInt("repIndent");
+				
+				
+				BoardDTO dto = new BoardDTO(num, author, title, null, writeday, 0, repRoot, repStep, repIndent);
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeAll(rs, conn, pstmt);
+		}
+				
+		return list;
+	}
+
+	private void increaseReadcnt(Connection conn) {
+		BoardDTO dto = new BoardDTO();
+		PreparedStatement pstmt =null;
+		String sql = "update myboard set readcnt = readcnt +1 "
+				+ "where num = ?";
+		try {
+			conn = dataFactory.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, dto.getNum());
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeAll(null, null, pstmt);
+		}
+		
+	}
+
+	public BoardDTO read(int num) {
+	      BoardDTO dto = null;
+	      
+	      Connection conn = null;
+	      PreparedStatement pstmt = null;
+	      String sql = "SELECT * FROM myboard WHERE num = ?";
+	      ResultSet rs = null;
+	      
+	      try {
+	         conn = dataFactory.getConnection();
+	         increaseReadcnt(conn);
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setInt(1, num);
+	         rs = pstmt.executeQuery();
+	         if(rs.next()) {
+	            String author = rs.getString("author");
+	            String title = rs.getString("title");
+	            String content = rs.getString("content");
+	            String writeday = rs.getString("writeday");
+	            int readcnt = rs.getInt("readcnt");
+	            
+	            dto= new BoardDTO(num, author, title, content, writeday, readcnt, -1, -1, -1);
+	         }
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         closeAll(rs, conn, pstmt);
+	      }
+	      
+	      
+	      
+	      return dto;
+	   }
+
+
+}
