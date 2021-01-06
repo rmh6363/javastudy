@@ -13,6 +13,8 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import kr.co.domain.BoardDTO;
+import kr.co.domain.PageTO;
+import oracle.net.aso.p;
 
 public class BoardDAO {
 	private DataSource dataFactory;
@@ -58,7 +60,7 @@ public class BoardDAO {
 			pstmt.setInt(5, num);
 			pstmt.setInt(6, 0);
 			pstmt.setInt(7, 0);
-
+			
 			pstmt.executeUpdate();
 
 		} catch (Exception e) {
@@ -181,7 +183,7 @@ public class BoardDAO {
 		return dto;
 	}
 
-	public BoardDTO upadteui(int num) {
+	public BoardDTO updateui(int num) {
 		BoardDTO dto = null;
 
 		Connection conn = null;
@@ -202,8 +204,13 @@ public class BoardDAO {
 				String content = rs.getString("content");
 				String writeday = rs.getString("writeday");
 				int readcnt = rs.getInt("readcnt");
+				int repRoot = rs.getInt("repRoot");
+				int repStep = rs.getInt("repStep");
+				int repIndent = rs.getInt("repIndent");
+				
 
-				dto = new BoardDTO(num, author, title, content, writeday, readcnt, -1, -1, -1);
+				dto = new BoardDTO(num, author, title, content, writeday, 
+						readcnt, repRoot, repStep, repIndent);
 				
 			}
 		} catch (Exception e) {
@@ -293,8 +300,130 @@ public class BoardDAO {
 	   }
 
 	public void reply(int orinum, BoardDTO repDTO) {
+		Connection conn =null;
+		PreparedStatement pstmt = null;
+		String sql = "insert into myboard "
+				+ "(num,author,title,content,repRoot,repStep,repIndent)"
+				+ "values(?,?,?,?,?,?,?)";
+		boolean isOk = false;
+		try {
+			conn = dataFactory.getConnection();
+			conn.setAutoCommit(isOk);
+			int num = getNum(conn);
+			BoardDTO oriDTO = updateui(orinum);
+			
+			increaseRepStepOtherReply(conn,oriDTO);
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, num );
+			pstmt.setString(2, repDTO.getAuthor());
+			pstmt.setString(3, repDTO.getTitle());
+			pstmt.setString(4, repDTO.getContent());
+			pstmt.setInt(5, oriDTO.getRepRoot());
+			pstmt.setInt(6, oriDTO.getRepStep()+1);
+			pstmt.setInt(7, oriDTO.getRepIndent()+1);
+			pstmt.executeUpdate();
+			isOk = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (isOk) {
+					conn.commit();
+				} else {
+					conn.rollback();
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			closeAll(null, conn, pstmt);
+		}
 		
+	}
+
+	private void increaseRepStepOtherReply(Connection conn, BoardDTO oriDTO) {
+		PreparedStatement pstmt =null;
+		String sql = "update myboard set repStep = repStep+1 "
+				+ "where repRoot = ? and repStep > ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, oriDTO.getRepRoot());
+			pstmt.setInt(2, oriDTO.getRepStep());
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeAll(null, null, pstmt);
+		}
+	}
+	  public PageTO page(int curPage) {
+	      PageTO to = new PageTO(curPage);
+	      List<BoardDTO> list = new ArrayList<BoardDTO>();
+	      
+	      Connection conn = null;
+	      PreparedStatement pstmt = null;
+	      String sql = "SELECT * FROM (SELECT ROWNUM rnum, num, title, author, writeday, readcnt, repIndent from(SELECT * FROM myboard order by repRoot desc, repStep asc)) WHERE rnum >= ? AND rnum <= ?";
+	      ResultSet rs = null;
+	      
+	      try {
+	         conn = dataFactory.getConnection();
+	         
+	         int amount = getAmount(conn);
+	         to.setAmount(amount);
+	         
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setInt(1, to.getStartNum());
+	         pstmt.setInt(2, to.getEndNum());
+	               
+	         rs = pstmt.executeQuery();
+	         while (rs.next()) {
+	            int num = rs.getInt("num");
+	            String title = rs.getString("title");
+	            String author = rs.getString("author");
+	            String writeday = rs.getString("writeday");
+	            int readcnt = rs.getInt("readcnt");
+	            int repIndent = rs.getInt("repIndent");
+	            
+	            BoardDTO dto = new BoardDTO(num, author, title, null, 
+	                  writeday, readcnt, -1, -1, repIndent);
+	            
+	            list.add(dto);
+	         }
+	         to.setList(list);
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         closeAll(rs, conn, pstmt);
+	      }
+	      
+	      return to;
+	   }
+
+
+	private int getAmount(Connection conn) {
+		int amount = 0;
 		
+		PreparedStatement pstmt =null;
+		ResultSet rs =null;
+		String sql = "select count(num) from myboard";
+		try {
+			
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				amount = rs.getInt(1);
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeAll(rs, null, pstmt);
+		}
+		
+				
+		return amount;
 	}
 
 

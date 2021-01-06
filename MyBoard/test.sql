@@ -31,3 +31,9 @@ select NVL2(MAX(num),MAX(num)+1,1)from myboard
 insert into myboard(num,author,title,content,repRoot,repStep,repIndent)
 values(NVL2(num,1,num+1),'김', 'hello','hello world',num,0,0)
 update myboard set readcnt = readcnt+1 where num=1
+select * from myboard order by repRoot desc, repStep asc
+select count(num) from myboard
+select rownum rnum, num,title,author, writeday, readcnt, repIndent 
+from(select * from myboard order by repRoot desc, repStep asc)
+
+select * from (select rownum rnum, num,title,author, writeday, readcnt, repIndent from(select * from myboard order by repRoot desc, repStep asc)) where rnum >= ? and rnum <= ?

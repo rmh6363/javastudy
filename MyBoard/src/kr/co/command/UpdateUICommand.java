@@ -17,7 +17,7 @@ public class UpdateUICommand implements Command {
 			throws IOException, ServletException {
 		String snum = request.getParameter("num");
 		int num = Integer.parseInt(snum);
-		BoardDTO dto = new BoardDAO().upadteui(num);
+		BoardDTO dto = new BoardDAO().updateui(num);
 		
 		request.setAttribute("dto", dto);
 		return new CommandAction(false, "update.jsp");
