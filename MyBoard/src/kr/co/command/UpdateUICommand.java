@@ -15,11 +15,13 @@ public class UpdateUICommand implements Command {
 	@Override
 	public CommandAction execute(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		String snum = request.getParameter("num");
-		int num = Integer.parseInt(snum);
+		String sNum = request.getParameter("num");
+		int num = Integer.parseInt(sNum);
+		
 		BoardDTO dto = new BoardDAO().updateui(num);
 		
 		request.setAttribute("dto", dto);
+		
 		return new CommandAction(false, "update.jsp");
 	}
 

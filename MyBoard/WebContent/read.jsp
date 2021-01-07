@@ -25,8 +25,8 @@ ${dto.content}
 </p>
 
 
-<a href="updateui.do?num=${dto.num}">수정</a>
-<a href="delete.do?num=${dto.num}">삭제</a>
+<a href="updateui.do?num=${dto.num}">수정</a> 
+<a href="delete.do?num=${dto.num}">삭제</a> 
 <a href="replyui.do?num=${dto.num}">답글</a>
 
 

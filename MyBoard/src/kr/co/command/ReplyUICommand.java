@@ -6,7 +6,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.co.dao.BoardDAO;
 import kr.co.domain.CommandAction;
 
 public class ReplyUICommand implements Command {
@@ -14,11 +13,10 @@ public class ReplyUICommand implements Command {
 	@Override
 	public CommandAction execute(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		String snum = request.getParameter("num");
+		String sNum = request.getParameter("num");
 		
 		
-		
-		return new CommandAction(true, "reply.jsp?num="+snum);
+		return new CommandAction(true, "reply.jsp?num="+sNum);
 	}
 
 }

@@ -15,13 +15,16 @@ public class UpdateCommand implements Command {
 	@Override
 	public CommandAction execute(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		String snum = request.getParameter("num");
+		String sNum = request.getParameter("num");
+		int num = Integer.parseInt(sNum);
+		
 		String author = request.getParameter("author");
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
-		int num = Integer.parseInt(snum);
 		
-		BoardDTO dto = new BoardDTO(num, author, title, content, null, -1, -1,-1, -1);
+		BoardDTO dto = new BoardDTO(num, author, title, content, null, -1, -1, -1, -1);
+		
+		
 		new BoardDAO().update(dto);
 		
 		

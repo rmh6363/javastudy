@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import kr.co.domain.CommandAction;
 
 public interface Command {
-	CommandAction execute(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException;
+	
+	CommandAction execute(HttpServletRequest request, 
+						HttpServletResponse response) 
+								throws IOException, ServletException;
 
 }

@@ -20,8 +20,11 @@ public class SearchCommand implements Command {
 		String searchKeyword = request.getParameter("searchkeyword");
 		
 		
-		List<BoardDTO> list = new BoardDAO().search(searchOption,searchKeyword);
+		List<BoardDTO> list = new BoardDAO().search(searchOption, searchKeyword);
 		request.setAttribute("list", list);
+		
+		
+		
 		return new CommandAction(false, "search.jsp");
 	}
 
